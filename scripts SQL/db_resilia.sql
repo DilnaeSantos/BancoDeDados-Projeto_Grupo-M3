@@ -11,9 +11,9 @@
 -- Tabela cursos - Tawany
 
 CREATE TABLE `curso` (
-    `id_curso`
-    `nome`
-    `carga_horaria`
+    `id_curso` int,
+    `nome` varchar(100),
+    `carga_horaria` int
 );
 
 -- Tabela categorias de curso(extra) - Denise
