@@ -12,7 +12,7 @@
 
 CREATE TABLE `curso` (
     `id_curso` int PRIMARY KEY AUTO_INCREMENT,
-    `nome` varchar(100),
+    `nome` varchar(100) NOT NULL,
     `carga_horaria` int
 );
 
