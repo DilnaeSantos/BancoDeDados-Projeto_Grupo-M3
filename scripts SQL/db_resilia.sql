@@ -10,4 +10,6 @@
 
 -- Tabela cursos - Tawany
 
+CREATE TABLE `curso` ();
+
 -- Tabela categorias de curso(extra) - Denise
