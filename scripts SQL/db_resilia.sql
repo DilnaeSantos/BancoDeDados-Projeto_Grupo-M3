@@ -11,7 +11,7 @@ CREATE TABLE `facilitador` (
   `id_status` int,
   FOREIGN KEY (`id_endereco`) REFERENCES `endereco` (`id_endereco`),
   FOREIGN KEY (`id_status`) REFERENCES `status` (`id_status`)
-);
+) default charset = utf8mb4;
 
 -- Tabela endereço
 
@@ -21,7 +21,7 @@ CREATE TABLE `endereco` (
   `cidade` varchar(100) NOT NULL,
   `estado` varchar(50) NOT NULL,
   `cep` varchar(10) NOT NULL
-);
+) default charset = utf8mb4;
 
 --Tabela intermediária curso_modulo_facilitador
 
@@ -32,14 +32,14 @@ CREATE TABLE `curso_modulo_facilitador` (
     FOREIGN KEY (`id_curso`) REFERENCES `curso` (`id_curso`),
     FOREIGN KEY (`id_modulo`) REFERENCES `modulo` (`id_modulo`),
     FOREIGN KEY (`id_facilitador`) REFERENCES `facilitador` (`id_facilitador`)
-);
+) default charset = utf8mb4;
    
 --Tabela modulo
 CREATE TABLE `modulo` (
   `id_modulo` int PRIMARY KEY AUTO_INCREMENT,
   `nome` varchar(100) NOT NULL,
   `numero_modulo` int NOT NULL
-);
+) default charset = utf8mb4;
 
 -- Criação do banco de dados
 -- Tabela estudantes - Dilnae
@@ -52,4 +52,4 @@ CREATE TABLE
         `id_curso` int PRIMARY KEY AUTO_INCREMENT,
         `nome` varchar(100) NOT NULL,
         `carga_horaria` int
-    );
+    ) default charset = utf8mb4;
