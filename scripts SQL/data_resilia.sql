@@ -3,6 +3,8 @@
 -- Inserts tabela turmas - José
 -- Inserts tabela módulos - Em grupo
 -- Inserts tabela cursos - Tawany
+-- Inserts tabela categorias de curso(extra) - Denise
+
 INSERT INTO
     curso (nome, carga_horaria)
 VALUES
@@ -17,4 +19,12 @@ VALUES
     ('Programa de Liderança Inovadora', 180),
     ('Programa de Trainee Resilia', 240);
 
--- Inserts tabela categorias de curso(extra) - Denise
+insert into status
+	(id_status, situacao)
+values
+(default, 'ativo'),
+(default, 'inativo'),
+(default, 'evadido'),
+(default, 'concluido'),
+(default, 'reprovado');
+
