@@ -11,7 +11,7 @@
 -- Tabela cursos - Tawany
 
 CREATE TABLE `curso` (
-    `id_curso` int,
+    `id_curso` int PRIMARY KEY,
     `nome` varchar(100),
     `carga_horaria` int
 );
