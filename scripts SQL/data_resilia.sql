@@ -1,5 +1,28 @@
 -- Inserts tabela estudantes - Dilnae
 -- Inserts tabela pessoas facilitadoras - Denise
+-- Inserts para a tabela 'facilitador'
+INSERT INTO facilitador (cpf, nome, data_nascimento, email, telefone, habilidade, id_endereco, id_status) VALUES
+('12345678901', 'João da Silva', '1985-03-10', 'joao@gmail.com', '(11) 98765-4321', 'Hardskill', 1, 1),
+('23456789012', 'Carlos Oliveira', '1988-06-20', 'carlos@hotmail.com', '(21) 98765-4322', 'Hardskill', 2, 1),
+('34567890123', 'Ana Pereira', '1986-01-15', 'ana@outlook.com', '(31) 98765-4323', 'Hardskill', 3, 1),
+('45678901234', 'Mariana Santos', '1995-09-05', 'mariana@gmail.com', '(41) 98765-4324', 'Hardskill', 4, 1),
+('56789012345', 'Pedro Oliveira', '1990-03-18', 'pedro@hotmail.com', '(51) 98765-4325', 'Hardskill', 5, 2),
+('67890123456', 'Maria Almeida', '1987-11-30', 'maria@outlook.com', '(61) 98765-4326', 'Hardskill', 6, 2),
+('78901234567', 'José da Silva', '1988-08-22', 'jose@gmail.com', '(71) 98765-4327', 'Hardskill', 7, 2),
+('89012345678', 'Carla Oliveira', '1990-06-12', 'carla@hotmail.com', '(81) 98765-4328', 'Hardskill', 8, 2),
+('90123456789', 'Lucas Santos', '1995-02-03', 'lucas@gmail.com', '(12) 98765-4329', 'Hardskill', 9, 1),
+('01234567890', 'Fernanda Rodrigues', '1990-12-28', 'fernanda@gmail.com', '(22) 98765-4330', 'Softskill', 10, 1),
+('12345678909', 'Rafael Lima', '1988-04-15', 'rafael@hotmail.com', '(32) 98765-4331', 'Softskill', 11, 1),
+('23456789098', 'Isabela Souza', '1989-07-01', 'isabela@outlook.com', '(42) 98765-4332', 'Softskill', 12, 2),
+('34567890187', 'Gustavo Fernandes', '1990-01-10', 'gustavo@gmail.com', '(52) 98765-4333', 'Softskill', 13, 2),
+('45678901276', 'Camila Alves', '1984-11-20', 'camila@hotmail.com', '(62) 98765-4334', 'Softskill', 14, 1),
+('56789012365', 'Thiago Santos', '1990-07-05', 'thiago@outlook.com', '(72) 98765-4335', 'Hardskill', 15, 1),
+('67890123454', 'Amanda Silva', '2002-09-30', 'amanda@gmail.com', '(82) 98765-4336', 'Hardskill', 16, 2),
+('78901234543', 'Matheus Oliveira', '1985-03-17', 'matheus@hotmail.com', '(92) 98765-4337', 'Hardskill', 17, 1),
+('89012345632', 'Larissa Rodrigues', '1984-05-26', 'larissa@outlook.com', '(02) 98765-4338', 'Hardskill', 18, 2),
+('90123456721', 'Bruno Lima', '1983-08-11', 'bruno@gmail.com', '(13) 98765-4339', 'Softskill', 19, 2),
+('01234567810', 'Juliana Fernandes', '1996-02-28', 'juliana@gmail.com', '(23) 98765-4340', 'Hardskill', 20, 1);
+
 -- Inserts tabela turmas - José
 -- Inserts tabela módulos - Em grupo
 -- Inserts tabela cursos - Tawany
@@ -40,6 +63,7 @@ INSERT INTO endereco (logradouro, cidade, estado, cep) VALUES
 ('Avenida das Gaivotas, 890', 'João Pessoa', 'PB', '58000-123'),
 ('Alameda dos Ipês, 123', 'Campo Grande', 'MS', '79000-456'),
 ('Estrada da Serra, 456', 'Teresina', 'PI', '64000-789'),
+-- Endereço estudantes
 ('Rua do Bosque, 789', 'Maceió', 'AL', '57000-234'),
 ('Avenida das Dunas, 234', 'Aracaju', 'SE', '49000-567'),
 ('Praça Central, 567', 'Boa Vista', 'RR', '69300-890'),
@@ -71,4 +95,3 @@ INSERT INTO endereco (logradouro, cidade, estado, cep) VALUES
 ('Travessa das Pizzas, 123', 'Canoas', 'RS', '92000-456'),
 ('Praça das Sobremesas, 456', 'Gramado', 'RS', '95670-789'),
 ('Alameda dos Restaurantes, 789', 'Caxias do Sul', 'RS', '95000-234'),
--- Endereço estudantes
