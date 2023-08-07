@@ -8,4 +8,8 @@
 
 -- Inserts tabela cursos - Tawany
 
+INSERT INTO curso (nome, carga_horaria);
+VALUES
+();
+
 -- Inserts tabela categorias de curso(extra) - Denise
