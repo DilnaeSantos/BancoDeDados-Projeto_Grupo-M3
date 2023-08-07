@@ -4,18 +4,17 @@
 -- Inserts tabela módulos - Em grupo
 -- Inserts tabela cursos - Tawany
 INSERT INTO
-    curso (nome, carga_horaria);
-
+    curso (nome, carga_horaria)
 VALUES
-    ('Formação em Análise de Sistemas'),
-    ('Formação em Data Analytics'),
-    ('Formação em Hacker de Negócios'),
-    ('Formação em Iniciação em Cultura Digital'),
-    ('Formação em Upskilling e Reskilling'),
-    ('Formação em WebDev Full Stack Java'),
-    ('Formação em WebDev Full Stack JavaScript'),
-    ('Programa de Estágio Resilia'),
-    ('Programa de Liderança Inovadora'),
-    ('Programa de Trainee Resilia');
+    ('Formação em Análise de Sistemas', 180),
+    ('Formação em Data Analytics', 400),
+    ('Formação em Hacker de Negócios', 240),
+    ('Formação em Iniciação em Cultura Digital', 180),
+    ('Formação em Upskilling e Reskilling', 300),
+    ('Formação em WebDev Full Stack Java', 360),
+    ('Formação em WebDev Full Stack JavaScript', 500),
+    ('Programa de Estágio Resilia', 120),
+    ('Programa de Liderança Inovadora', 180),
+    ('Programa de Trainee Resilia', 240);
 
 -- Inserts tabela categorias de curso(extra) - Denise
