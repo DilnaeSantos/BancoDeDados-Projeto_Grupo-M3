@@ -40,9 +40,6 @@ INSERT INTO
 VALUES
     ('Formação em Análise de Sistemas', 180),
     ('Formação em Data Analytics', 400),
-    ('Formação em Hacker de Negócios', 240),
-    ('Formação em Iniciação em Cultura Digital', 180),
-    ('Formação em Upskilling e Reskilling', 300),
     ('Formação em WebDev Full Stack Java', 360),
     ('Formação em WebDev Full Stack JavaScript', 500),
     ('Programa de Estágio Resilia', 120),
@@ -105,19 +102,6 @@ INSERT INTO endereco (logradouro, cidade, estado, cep) VALUES
 ('Praça das Sobremesas, 456', 'Gramado', 'RS', '95670-789'),
 ('Alameda dos Restaurantes, 789', 'Caxias do Sul', 'RS', '95000-234'),
 
-INSERT INTO
-    curso (nome, carga_horaria)
-VALUES
-    ('Formação em Análise de Sistemas', 180),
-    ('Formação em Data Analytics', 400),
-    ('Formação em Hacker de Negócios', 240),
-    ('Formação em Iniciação em Cultura Digital', 180),
-    ('Formação em Upskilling e Reskilling', 300),
-    ('Formação em WebDev Full Stack Java', 360),
-    ('Formação em WebDev Full Stack JavaScript', 500),
-    ('Programa de Estágio Resilia', 120),
-    ('Programa de Liderança Inovadora', 180),
-    ('Programa de Trainee Resilia', 240);
 
 insert into status
 	(id_status, situacao)
@@ -126,4 +110,4 @@ values
 (default, 'inativo'),
 (default, 'evadido'),
 (default, 'concluido'),
-(default, 'reprovado')
+(default, 'reprovado');
