@@ -87,10 +87,8 @@ CREATE TABLE `aluno` (
 
 -- Tabela Log
 CREATE TABLE `log` (
-    `id_log`,
-    `data_hora`,
-    `acao`,
-    `id_aluno`
+    `id_log` INT,
+    `data_hora` TIMESTAMP,
+    `acao` VARCHAR(100),
+    `id_aluno` INT
 );
-
-
