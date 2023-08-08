@@ -4,9 +4,9 @@
 -- Tabela turmas - José
 -- Tabela módulos - Em grupo
 CREATE TABLE `modulo` (
-    `id_modulo`,
-    `nome`,
-    `numero_modulo`
+    `id_modulo` INT,
+    `nome` VARCHAR(100),
+    `numero_modulo` INT
 );
 
 -- Tabela cursos - Tawany
