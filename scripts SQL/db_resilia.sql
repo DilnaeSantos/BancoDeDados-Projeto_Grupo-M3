@@ -3,7 +3,18 @@
 -- Tabela pessoas facilitadoras - Denise
 -- Tabela turmas - José
 -- Tabela módulos - Em grupo
+CREATE TABLE `modulo` (
+    `id_modulo` INT PRIMARY KEY AUTO_INCREMENT,
+    `nome` VARCHAR(100) NOT NULL,
+    `numero_modulo` INT NOT NULL
+);
+
 -- Tabela cursos - Tawany
+CREATE TABLE `curso` (
+    `id_curso` INT PRIMARY KEY AUTO_INCREMENT,
+    `nome` VARCHAR(100) NOT NULL,
+    `carga_horaria` INT
+)  DEFAULT CHARSET=UTF8MB4;
 
 -- Tabela status
 CREATE TABLE `status` (
