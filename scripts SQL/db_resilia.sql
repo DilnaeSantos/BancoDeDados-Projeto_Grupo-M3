@@ -90,5 +90,6 @@ CREATE TABLE `log` (
     `id_log` INT PRIMARY KEY AUTO_INCREMENT,
     `data_hora` TIMESTAMP NOT NULL,
     `acao` VARCHAR(100) NOT NULL,
-    `id_aluno` INT
+    `id_aluno` INT,
+    FOREIGN KEY (`id_aluno`) REFERENCES `aluno` (`id_aluno`)
 );
