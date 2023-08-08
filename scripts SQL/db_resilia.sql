@@ -4,7 +4,7 @@
 -- Tabela turmas - José
 -- Tabela módulos - Em grupo
 CREATE TABLE `modulo` (
-    `id_modulo` INT,
+    `id_modulo` INT PRIMARY KEY,
     `nome` VARCHAR(100),
     `numero_modulo` INT
 );
