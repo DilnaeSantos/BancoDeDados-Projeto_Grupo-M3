@@ -92,4 +92,4 @@ CREATE TABLE `log` (
     `acao` VARCHAR(100) NOT NULL,
     `id_aluno` INT,
     FOREIGN KEY (`id_aluno`) REFERENCES `aluno` (`id_aluno`)
-);
+)  DEFAULT CHARSET=UTF8MB4;
