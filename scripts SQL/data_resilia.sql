@@ -1,7 +1,18 @@
--- Inserts tabela estudantes - Dilnae
 -- Inserts tabela pessoas facilitadoras - Denise
--- Inserts para a tabela 'facilitador'
+-- Inserts tabela turmas - José
+-- Inserts tabela módulos - Em grupo
+-- Inserts tabela cursos - Tawany
+-- Inserts tabela estudantes - Dilnae
+-- Inserts tabela categorias de curso(extra) - Denise
 
+INSERT INTO turma (nome, quantidade_alunos, id_curso)
+VALUES
+    ('VAMO AI', 25, 1), -- Onde 1 é o id do curso 'Formação em Análise de Sistemas'
+    ('codigo do amanha', 20, 2), -- Onde 2 é o id do curso 'Formação em Data Analytics'
+    ('resilia', 25, 3), -- Onde 3 é o id do curso 'Formação em WebDev Full Stack Java'
+    ('senac', 20, 4); -- Onde 4 é o id do curso 'Formação em WebDev Full Stack JavaScript'
+  
+-- Inserts para a tabela 'facilitador'
 INSERT INTO facilitador (cpf, nome, data_nascimento, email, telefone, habilidade, id_endereco, id_status) VALUES
 ('12345678901', 'João da Silva', '1985-03-10', 'joao@gmail.com', '(11) 98765-4321', 'Hardskill', 1, 1),
 ('23456789012', 'Carlos Oliveira', '1988-06-20', 'carlos@hotmail.com', '(21) 98765-4322', 'Hardskill', 2, 1),
@@ -24,9 +35,6 @@ INSERT INTO facilitador (cpf, nome, data_nascimento, email, telefone, habilidade
 ('90123456721', 'Bruno Lima', '1983-08-11', 'bruno@gmail.com', '(13) 98765-4339', 'Softskill', 19, 2),
 ('01234567810', 'Juliana Fernandes', '1996-02-28', 'juliana@gmail.com', '(23) 98765-4340', 'Hardskill', 20, 1);
 
--- Inserts tabela turmas - José
--- Inserts tabela módulos - Em grupo
--- Inserts tabela cursos - Tawany
 INSERT INTO
     curso (nome, carga_horaria)
 VALUES
@@ -96,12 +104,6 @@ INSERT INTO endereco (logradouro, cidade, estado, cep) VALUES
 ('Travessa das Pizzas, 123', 'Canoas', 'RS', '92000-456'),
 ('Praça das Sobremesas, 456', 'Gramado', 'RS', '95670-789'),
 ('Alameda dos Restaurantes, 789', 'Caxias do Sul', 'RS', '95000-234'),
-
--- Inserts tabela estudantes - Dilnae
--- Inserts tabela turmas - José
--- Inserts tabela módulos - Em grupo
--- Inserts tabela cursos - Tawany
--- Inserts tabela categorias de curso(extra) - Denise
 
 INSERT INTO
     curso (nome, carga_horaria)

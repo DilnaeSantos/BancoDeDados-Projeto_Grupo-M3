@@ -1,4 +1,3 @@
--- Criação do banco de dados
 -- Tabela aluno - Dilnae
 -- Tabela status - Dilnae
 -- Tabela pessoas facilitadoras - Denise
@@ -27,8 +26,15 @@ CREATE TABLE `facilitador` (
   FOREIGN KEY (`id_status`) REFERENCES `status` (`id_status`)
 ) default charset = utf8mb4;
 
--- Tabela endereço
+-- Tabela turmas - José
+CREATE TABLE `turma` (
+  `id_turma` int PRIMARY KEY AUTO_INCREMENT,
+  `nome` varchar(255) NOT NULL,
+  `quantidade_alunos` int,
+  `id_curso` int
+)default charset = utf8mb4;
 
+-- Tabela endereço
 CREATE TABLE `endereco` (
   `id_endereco` int PRIMARY KEY AUTO_INCREMENT,
   `logradouro` varchar(200) NOT NULL,
@@ -38,7 +44,6 @@ CREATE TABLE `endereco` (
 ) default charset = utf8mb4;
 
 --Tabela intermediária curso_modulo_facilitador
-
 CREATE TABLE `curso_modulo_facilitador` (
   `id_curso` int,
   `id_modulo` int,
