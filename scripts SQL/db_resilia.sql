@@ -7,7 +7,7 @@ CREATE TABLE `modulo` (
     `id_modulo` INT PRIMARY KEY AUTO_INCREMENT,
     `numero_modulo` INT NOT NULL
     `nome` VARCHAR(100) NOT NULL,
-);
+)  DEFAULT CHARSET=UTF8MB4;
 
 -- Tabela cursos - Tawany
 CREATE TABLE `curso` (
