@@ -5,15 +5,11 @@
 -- Tabela módulos - Em grupo
 
 -- Tabela cursos - Tawany
-<<<<<<< HEAD
-CREATE TABLE
-    `curso` (
-        `id_curso` int PRIMARY KEY AUTO_INCREMENT,
-        `nome` varchar(100) NOT NULL,
-        `carga_horaria` int
-) default charset = utf8mb4;
-=======
->>>>>>> a9392a4e2895dd5021f16bda70d02bc0079e9104
+CREATE TABLE `curso` (
+    `id_curso` INT PRIMARY KEY AUTO_INCREMENT,
+    `nome` VARCHAR(100) NOT NULL,
+    `carga_horaria` INT
+)  DEFAULT CHARSET=UTF8MB4;
 
 -- Tabela status
 CREATE TABLE `status` (
