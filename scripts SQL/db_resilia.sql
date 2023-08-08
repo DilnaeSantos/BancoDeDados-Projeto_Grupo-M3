@@ -3,7 +3,11 @@
 -- Tabela pessoas facilitadoras - Denise
 -- Tabela turmas - José
 -- Tabela módulos - Em grupo
-CREATE TABLE `modulo` ();
+CREATE TABLE `modulo` (
+    `id_modulo`,
+    `nome`,
+    `numero_modulo`
+);
 
 -- Tabela cursos - Tawany
 CREATE TABLE `curso` (
