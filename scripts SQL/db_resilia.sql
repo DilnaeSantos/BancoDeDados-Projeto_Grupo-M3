@@ -86,6 +86,11 @@ CREATE TABLE `aluno` (
 )  DEFAULT CHARSET=UTF8MB4;
 
 -- Tabela Log
-CREATE TABLE `log` ();
+CREATE TABLE `log` (
+    `id_log`,
+    `data_hora`,
+    `acao`,
+    `id_aluno`
+);
 
 
