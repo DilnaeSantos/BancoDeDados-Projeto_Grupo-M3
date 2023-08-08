@@ -90,6 +90,8 @@ CREATE TABLE `log` (
     `id_log` INT PRIMARY KEY AUTO_INCREMENT,
     `data_hora` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     `acao` VARCHAR(100) NOT NULL,
+    `status_anterior` VARCHAR(50) NOT NULL,
+    `status_atual` VARCHAR(50) NOT NULL,
     `id_aluno` INT,
     FOREIGN KEY (`id_aluno`) REFERENCES `aluno` (`id_aluno`)
 )  DEFAULT CHARSET=UTF8MB4;
