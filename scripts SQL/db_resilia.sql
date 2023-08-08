@@ -68,7 +68,7 @@ CREATE TABLE `curso_modulo_facilitador` (
     FOREIGN KEY (`id_facilitador`) REFERENCES `facilitador` (`id_facilitador`)
 )  DEFAULT CHARSET=UTF8MB4;
 
--- Tabela aluno
+-- Tabela Aluno
 CREATE TABLE `aluno` (
     `id_aluno` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     `cpf` CHAR(11) UNIQUE NOT NULL,
@@ -85,6 +85,7 @@ CREATE TABLE `aluno` (
     FOREIGN KEY (`id_turma`) REFERENCES `turma` (`id_turma`)
 )  DEFAULT CHARSET=UTF8MB4;
 
-
+-- Tabela Log
+CREATE TABLE `log` ();
 
 
