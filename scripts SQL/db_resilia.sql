@@ -87,7 +87,7 @@ CREATE TABLE `aluno` (
 
 -- Tabela Log
 CREATE TABLE `log` (
-    `id_log` INT PRIMARY KEY,
+    `id_log` INT PRIMARY KEY AUTO_INCREMENT,
     `data_hora` TIMESTAMP,
     `acao` VARCHAR(100),
     `id_aluno` INT
