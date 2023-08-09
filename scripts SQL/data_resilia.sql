@@ -15,22 +15,22 @@ VALUES
 -- Inserts da tabela Módulo
 INSERT INTO modulo (numero_modulo, nome)
 VALUES
-    (0),
-    (1),
-    (1),
-    (1),
-    (2),
-    (2),
-    (2),
-    (3),
-    (3),
-    (4),
-    (4),
-    (4),
-    (5),
-    (5),
-    (5),
-    (5);
+    (0, 'Introdução ao Curso'), -- Referente a todos os cursos.
+    (1, 'Introdução ao Front-End e Criação de Hábitos'), -- Referente aos cursos "WebDev Full Stack JavaScript" e "WebDev Full Stack Java".
+    (1, 'Fundamentos de Data Analytics e Pensamento Analítico Fundacional'), -- Referente ao curso "Data Analytics".
+    (1, 'Fundamentos da Análise de Sistemas e Resolução de Problemas'), -- Referente ao curso "Análise de Sistemas".
+    (2, 'Orientação a Objetos e Inteligência Emocional'), -- Referente aos cursos "WebDev Full Stack JavaScript" e "WebDev Full Stack Java".
+    (2, 'Análise Exploratória de Dados e Descoberta de Insights'), -- Referente ao curso "Data Analytics".
+    (2, 'Técnicas de Levantamento de Requisitos e Gerenciamento de Projetos'), -- Referente ao curso "Análise de Sistemas".
+    (3, 'Modelos de Armazenamento de Dados e Relacionamento Interpessoal'), -- Referente aos cursos "WebDev Full Stack JavaScript", "Data Analytics" e "WebDev Full Stack Java".
+    (3, 'Verificação de Requisitos e Inovação'), -- Referente ao curso "Análise de Sistemas".
+    (4, 'Tecnologias Back-End e Metodologias Ágeis'), -- Referente ao curso "WebDev Full Stack JavaScript".
+    (4, 'Modelagem de Sistemas e Comunicação de Resultados Complexos'), -- Referente aos cursos "Data Analytics" e "Análise de Sistemas".
+    (4, 'Desenvolvimento Back-End com Java e Aprendizado Contínuo'), -- Referente ao curso "WebDev Full Stack Java".
+    (5, 'Tecnologias Front-End e Postura Profissional'), -- Referente ao curso "WebDev Full Stack Java".
+    (5, 'Big Data e Pensamento Estratégico'), -- Referente ao curso "Data Analytics".
+    (5, 'Construção de Aplicações Full Stack e Colaboração'), -- Referente ao curso "WebDev Full Stack Java".
+    (5, 'Implementação de Sistemas e Liderança'); -- Referente ao curso "Análise de Sistemas".
 
 -- Inserts da tabela Status
 INSERT INTO status (situacao)
@@ -101,10 +101,10 @@ VALUES
 -- Inserts da tabela Turma
 INSERT INTO turma (nome, quantidade_alunos, id_curso)
 VALUES
-    ('Vamo Ai - iFood', 15, 1), -- Onde 1 é o id do curso 'Formação em Análise de Sistemas'
-    ('Códigos do Amanhã - EBANX', 15, 2), -- Onde 2 é o id do curso 'Formação em Data Analytics'
-    ('Resilia', 15, 3), -- Onde 3 é o id do curso 'Formação em WebDev Full Stack Java'
-    ('Senac RJ', 15, 4); -- Onde 4 é o id do curso 'Formação em WebDev Full Stack JavaScript'
+    ('Vamo Ai - iFood', 15, 1), -- Onde 1 é o id do curso "Formação em Análise de Sistemas".
+    ('Códigos do Amanhã - EBANX', 15, 2), -- Onde 2 é o id do curso "Formação em Data Analytics".
+    ('Resilia', 15, 3), -- Onde 3 é o id do curso "Formação em WebDev Full Stack Java".
+    ('Senac RJ', 15, 4); -- Onde 4 é o id do curso "Formação em WebDev Full Stack JavaScript".
 
 -- Inserts da tabela Facilitador
 INSERT INTO facilitador (cpf, nome, data_nascimento, email, telefone, habilidade, id_endereco, id_status)
