@@ -1,11 +1,5 @@
--- Inserts tabela estudantes - Dilnae
--- Segundo conjunto de inserts (30 registros)
--- Inserts tabela pessoas facilitadoras - Denise
--- Inserts tabela turmas - José
--- Inserts tabela módulos - Em grupo
--- Inserts tabela cursos - Tawany
 
--- Inserts da tabela Curso
+-- Inserts da tabela Curso - Tawany
 INSERT INTO curso (nome, carga_horaria)
 VALUES
     ('Formação em Análise de Sistemas', 180),
@@ -13,7 +7,7 @@ VALUES
     ('Formação em WebDev Full Stack Java', 360),
     ('Formação em WebDev Full Stack JavaScript', 500);
 
--- Inserts tabela endereço
+-- Inserts tabela endereço - Denise
 INSERT INTO endereco (logradouro, cidade, estado, cep) VALUES
 -- Endereço facilitadores
 ('Rua das Flores, 123', 'São Paulo', 'SP', '01234-567'),
@@ -97,7 +91,7 @@ INSERT INTO endereco (logradouro, cidade, estado, cep) VALUES
 ('Rua dos Sabores, 890', 'Maceió', 'AL', '57000-456'),
 ('Avenida das Churrascarias, 123', 'Arapiraca', 'AL', '57300-789');
 
--- Inserts da tabela Módulo
+-- Inserts da tabela Módulo - Tawany
 INSERT INTO modulo (numero_modulo, nome)
 VALUES
     (0, 'Introdução ao Curso'), -- Referente a todos os cursos.
@@ -117,7 +111,7 @@ VALUES
     (5, 'Construção de Aplicações Full Stack e Colaboração'), -- Referente ao curso "WebDev Full Stack Java".
     (5, 'Implementação de Sistemas e Liderança'); -- Referente ao curso "Análise de Sistemas".
 
--- Inserts da tabela Status
+-- Inserts da tabela Status - Dilnae
 INSERT INTO status (situacao)
 VALUES
     ('Ativo'),
@@ -126,7 +120,7 @@ VALUES
     ('Concluído'),
     ('Reprovado');
 
--- Inserts da tabela Turma
+-- Inserts da tabela Turma - José
 INSERT INTO turma (nome, quantidade_alunos, id_curso)
 VALUES
     ('Vamo Ai - iFood', 15, 1), -- Onde 1 é o id do curso "Formação em Análise de Sistemas".
@@ -134,7 +128,7 @@ VALUES
     ('Resilia', 15, 3), -- Onde 3 é o id do curso "Formação em WebDev Full Stack Java".
     ('Senac RJ', 15, 4); -- Onde 4 é o id do curso "Formação em WebDev Full Stack JavaScript".
 
--- Inserts da tabela Facilitador
+-- Inserts da tabela Facilitador - Denise
 INSERT INTO facilitador (cpf, nome, data_nascimento, email, telefone, habilidade, id_endereco, id_status)
 VALUES
     ('12345678901', 'João da Silva', '1985-03-10', 'joao@gmail.com', '(11) 98765-4321', 'Hard Skill', 1, 1),
@@ -164,7 +158,7 @@ VALUES
     (),
     ();
 
--- Inserts da tabela Aluno
+-- Inserts da tabela Aluno - Dilnae
 INSERT INTO aluno (cpf, nome, data_nascimento, email, telefone, pcd, id_endereco, id_status, id_turma)
 VALUES
     ('24177311260', 'Marli Clarice Aragão', '1951-05-15', 'marli_clarice_aragao@hotmail.com', '(79) 98338-0188', 0, 37, 1, 2),
@@ -228,7 +222,7 @@ VALUES
     ('78901234567', 'Mariana Almeida', '2003-08-05', 'mariana.almeida@gmail.com', '(81) 98888-8888', 0, 79, 3, 2),
     ('90123456789', 'Vinicius Santos', '2004-11-10', 'vinicius.santos@hotmail.com', '(86) 98888-7777', 0, 80, 4, 3);
 
--- Inserts da tabela Log
+-- Inserts da tabela Log - Denise
 INSERT INTO log (acao, status_anterior, status_atual, id_aluno)
 VALUES
     (),
