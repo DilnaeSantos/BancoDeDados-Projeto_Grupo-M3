@@ -1,18 +1,11 @@
--- Tabela aluno - Dilnae
--- Tabela status - Dilnae
--- Tabela pessoas facilitadoras - Denise
--- Tabela turmas - José
--- Tabela módulos - Em grupo
--- Tabela cursos - Tawany
-
--- Tabela Curso
+-- Tabela Curso 
 CREATE TABLE IF NOT EXISTS `curso` (
     `id_curso` INT PRIMARY KEY AUTO_INCREMENT,
     `nome` VARCHAR(100) NOT NULL,
     `carga_horaria` INT
 )  DEFAULT CHARSET=UTF8MB4;
 
--- Tabela Módulo
+-- Tabela Módulo 
 CREATE TABLE IF NOT EXISTS `modulo` (
     `id_modulo` INT PRIMARY KEY AUTO_INCREMENT,
     `numero_modulo` INT NOT NULL,
@@ -20,13 +13,13 @@ CREATE TABLE IF NOT EXISTS `modulo` (
 )  DEFAULT CHARSET=UTF8MB4;
 
 -- Tabela Status
-CREATE TABLE `status` (
+CREATE TABLE IF NOT EXISTS `status` (
     `id_status` INT PRIMARY KEY AUTO_INCREMENT,
     `situacao` VARCHAR(255) NOT NULL
 )  DEFAULT CHARSET=UTF8MB4;
 
 -- Tabela Endereço
-CREATE TABLE `endereco` (
+CREATE TABLE IF NOT EXISTS `endereco` (
     `id_endereco` INT PRIMARY KEY AUTO_INCREMENT,
     `logradouro` VARCHAR(200) NOT NULL,
     `cidade` VARCHAR(100) NOT NULL,
@@ -35,7 +28,7 @@ CREATE TABLE `endereco` (
 )  DEFAULT CHARSET=UTF8MB4;
 
 -- Tabela Turma
-CREATE TABLE `turma` (
+CREATE TABLE IF NOT EXISTS `turma` (
     `id_turma` INT PRIMARY KEY AUTO_INCREMENT,
     `nome` VARCHAR(255) NOT NULL,
     `quantidade_alunos` INT,
@@ -44,7 +37,7 @@ CREATE TABLE `turma` (
 )  DEFAULT CHARSET=UTF8MB4;
 
 -- Tabela Facilitador
-CREATE TABLE `facilitador` (
+CREATE TABLE IF NOT EXISTS `facilitador` (
     `id_facilitador` INT PRIMARY KEY AUTO_INCREMENT,
     `cpf` CHAR(11) UNIQUE NOT NULL,
     `nome` VARCHAR(100) NOT NULL,
@@ -59,7 +52,7 @@ CREATE TABLE `facilitador` (
 )  DEFAULT CHARSET=UTF8MB4;
 
 -- Tabela Intermediária Curso-Módulo-Facilitador
-CREATE TABLE `curso_modulo_facilitador` (
+CREATE TABLE IF NOT EXISTS `curso_modulo_facilitador` (
     `id_curso` INT,
     `id_modulo` INT,
     `id_facilitador` INT,
@@ -69,7 +62,7 @@ CREATE TABLE `curso_modulo_facilitador` (
 )  DEFAULT CHARSET=UTF8MB4;
 
 -- Tabela Aluno
-CREATE TABLE `aluno` (
+CREATE TABLE IF NOT EXISTS `aluno` (
     `id_aluno` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     `cpf` CHAR(11) UNIQUE NOT NULL,
     `nome` VARCHAR(255) NOT NULL,
