@@ -13,7 +13,10 @@ VALUES
     ('Formação em WebDev Full Stack JavaScript', 500);
 
 -- Inserts da tabela Módulo
-
+INSERT INTO modulo (numero_modulo, nome)
+VALUES
+    (),
+    ();
 
 -- Inserts da tabela Status
 INSERT INTO status (situacao)
