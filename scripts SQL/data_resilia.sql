@@ -3,7 +3,6 @@
 -- Inserts tabela turmas - José
 -- Inserts tabela módulos - Em grupo
 -- Inserts tabela cursos - Tawany
--- Inserts tabela categorias de curso(extra) - Denise
 
 -- Inserts da tabela Curso
 INSERT INTO curso (nome, carga_horaria)
@@ -17,13 +16,13 @@ VALUES
 
 
 -- Inserts da tabela Status
-INSERT INTO status (id_status, situacao)
+INSERT INTO status (situacao)
 VALUES
-    (default, 'ativo'),
-    (default, 'inativo'),
-    (default, 'evadido'),
-    (default, 'concluido'),
-    (default, 'reprovado');
+    ('Ativo'),
+    ('Inativo'),
+    ('Evadido'),
+    ('Concluído'),
+    ('Reprovado');
 
 -- Inserts da tabela Endereço
 INSERT INTO endereco (logradouro, cidade, estado, cep)
@@ -85,92 +84,40 @@ VALUES
 -- Inserts da tabela Turma
 INSERT INTO turma (nome, quantidade_alunos, id_curso)
 VALUES
-    ('VAMO AI', 25, 1), -- Onde 1 é o id do curso 'Formação em Análise de Sistemas'
-    ('codigo do amanha', 20, 2), -- Onde 2 é o id do curso 'Formação em Data Analytics'
-    ('resilia', 25, 3), -- Onde 3 é o id do curso 'Formação em WebDev Full Stack Java'
-    ('senac', 20, 4); -- Onde 4 é o id do curso 'Formação em WebDev Full Stack JavaScript'
+    ('Vamo Ai - iFood', 15, 1), -- Onde 1 é o id do curso 'Formação em Análise de Sistemas'
+    ('Códigos do Amanhã - EBANX', 15, 2), -- Onde 2 é o id do curso 'Formação em Data Analytics'
+    ('Resilia', 15, 3), -- Onde 3 é o id do curso 'Formação em WebDev Full Stack Java'
+    ('Senac RJ', 15, 4); -- Onde 4 é o id do curso 'Formação em WebDev Full Stack JavaScript'
 
 -- Inserts da tabela Facilitador
 INSERT INTO facilitador (cpf, nome, data_nascimento, email, telefone, habilidade, id_endereco, id_status)
 VALUES
-    ('12345678901', 'João da Silva', '1985-03-10', 'joao@gmail.com', '(11) 98765-4321', 'Hardskill', 1, 1),
-    ('23456789012', 'Carlos Oliveira', '1988-06-20', 'carlos@hotmail.com', '(21) 98765-4322', 'Hardskill', 2, 1),
-    ('34567890123', 'Ana Pereira', '1986-01-15', 'ana@outlook.com', '(31) 98765-4323', 'Hardskill', 3, 1),
-    ('45678901234', 'Mariana Santos', '1995-09-05', 'mariana@gmail.com', '(41) 98765-4324', 'Hardskill', 4, 1),
-    ('56789012345', 'Pedro Oliveira', '1990-03-18', 'pedro@hotmail.com', '(51) 98765-4325', 'Hardskill', 5, 2),
-    ('67890123456', 'Maria Almeida', '1987-11-30', 'maria@outlook.com', '(61) 98765-4326', 'Hardskill', 6, 2),
-    ('78901234567', 'José da Silva', '1988-08-22', 'jose@gmail.com', '(71) 98765-4327', 'Hardskill', 7, 2),
-    ('89012345678', 'Carla Oliveira', '1990-06-12', 'carla@hotmail.com', '(81) 98765-4328', 'Hardskill', 8, 2),
-    ('90123456789', 'Lucas Santos', '1995-02-03', 'lucas@gmail.com', '(12) 98765-4329', 'Hardskill', 9, 1),
-    ('01234567890', 'Fernanda Rodrigues', '1990-12-28', 'fernanda@gmail.com', '(22) 98765-4330', 'Softskill', 10, 1),
-    ('12345678909', 'Rafael Lima', '1988-04-15', 'rafael@hotmail.com', '(32) 98765-4331', 'Softskill', 11, 1),
-    ('23456789098', 'Isabela Souza', '1989-07-01', 'isabela@outlook.com', '(42) 98765-4332', 'Softskill', 12, 2),
-    ('34567890187', 'Gustavo Fernandes', '1990-01-10', 'gustavo@gmail.com', '(52) 98765-4333', 'Softskill', 13, 2),
-    ('45678901276', 'Camila Alves', '1984-11-20', 'camila@hotmail.com', '(62) 98765-4334', 'Softskill', 14, 1),
-    ('56789012365', 'Thiago Santos', '1990-07-05', 'thiago@outlook.com', '(72) 98765-4335', 'Hardskill', 15, 1),
-    ('67890123454', 'Amanda Silva', '2002-09-30', 'amanda@gmail.com', '(82) 98765-4336', 'Hardskill', 16, 2),
-    ('78901234543', 'Matheus Oliveira', '1985-03-17', 'matheus@hotmail.com', '(92) 98765-4337', 'Hardskill', 17, 1),
-    ('89012345632', 'Larissa Rodrigues', '1984-05-26', 'larissa@outlook.com', '(02) 98765-4338', 'Hardskill', 18, 2),
-    ('90123456721', 'Bruno Lima', '1983-08-11', 'bruno@gmail.com', '(13) 98765-4339', 'Softskill', 19, 2),
-    ('01234567810', 'Juliana Fernandes', '1996-02-28', 'juliana@gmail.com', '(23) 98765-4340', 'Hardskill', 20, 1);
+    ('12345678901', 'João da Silva', '1985-03-10', 'joao@gmail.com', '(11) 98765-4321', 'Hard Skill', 1, 1),
+    ('23456789012', 'Carlos Oliveira', '1988-06-20', 'carlos@hotmail.com', '(21) 98765-4322', 'Hard Skill', 2, 1),
+    ('34567890123', 'Ana Pereira', '1986-01-15', 'ana@outlook.com', '(31) 98765-4323', 'Hard Skill', 3, 1),
+    ('45678901234', 'Mariana Santos', '1995-09-05', 'mariana@gmail.com', '(41) 98765-4324', 'Hard Skill', 4, 1),
+    ('56789012345', 'Pedro Oliveira', '1990-03-18', 'pedro@hotmail.com', '(51) 98765-4325', 'Hard Skill', 5, 2),
+    ('67890123456', 'Maria Almeida', '1987-11-30', 'maria@outlook.com', '(61) 98765-4326', 'Hard Skill', 6, 2),
+    ('78901234567', 'José da Silva', '1988-08-22', 'jose@gmail.com', '(71) 98765-4327', 'Hard Skill', 7, 2),
+    ('89012345678', 'Carla Oliveira', '1990-06-12', 'carla@hotmail.com', '(81) 98765-4328', 'Hard Skill', 8, 2),
+    ('90123456789', 'Lucas Santos', '1995-02-03', 'lucas@gmail.com', '(12) 98765-4329', 'Hard Skill', 9, 1),
+    ('01234567890', 'Fernanda Rodrigues', '1990-12-28', 'fernanda@gmail.com', '(22) 98765-4330', 'Soft Skill', 10, 1),
+    ('12345678909', 'Rafael Lima', '1988-04-15', 'rafael@hotmail.com', '(32) 98765-4331', 'Soft Skill', 11, 1),
+    ('23456789098', 'Isabela Souza', '1989-07-01', 'isabela@outlook.com', '(42) 98765-4332', 'Soft Skill', 12, 2),
+    ('34567890187', 'Gustavo Fernandes', '1990-01-10', 'gustavo@gmail.com', '(52) 98765-4333', 'Soft Skill', 13, 2),
+    ('45678901276', 'Camila Alves', '1984-11-20', 'camila@hotmail.com', '(62) 98765-4334', 'Soft Skill', 14, 1),
+    ('56789012365', 'Thiago Santos', '1990-07-05', 'thiago@outlook.com', '(72) 98765-4335', 'Hard Skill', 15, 1),
+    ('67890123454', 'Amanda Silva', '2002-09-30', 'amanda@gmail.com', '(82) 98765-4336', 'Hard Skill', 16, 2),
+    ('78901234543', 'Matheus Oliveira', '1985-03-17', 'matheus@hotmail.com', '(92) 98765-4337', 'Hard Skill', 17, 1),
+    ('89012345632', 'Larissa Rodrigues', '1984-05-26', 'larissa@outlook.com', '(02) 98765-4338', 'Hard Skill', 18, 2),
+    ('90123456721', 'Bruno Lima', '1983-08-11', 'bruno@gmail.com', '(13) 98765-4339', 'Soft Skill', 19, 2),
+    ('01234567810', 'Juliana Fernandes', '1996-02-28', 'juliana@gmail.com', '(23) 98765-4340', 'Hard Skill', 20, 1);
 
 -- Inserts da tabela Intermediária Curso-Módulo-Facilitador
 
-INSERT INTO status
-	(id_status, situacao)
-VALUES
-(default, 'Ativo'),
-(default, 'Inativo'),
-(default, 'Evadido'),
-(default, 'Concluido'),
-(default, 'Reprovado');
 
-INSERT INTO curso 
-  (nome, carga_horaria)
-VALUES
-    ('Formação em Análise de Sistemas', 180),
-    ('Formação em Data Analytics', 400),
-    ('Formação em Hacker de Negócios', 240),
-    ('Formação em Iniciação em Cultura Digital', 180),
-    ('Formação em Upskilling e Reskilling', 300),
-    ('Formação em WebDev Full Stack Java', 360),
-    ('Formação em WebDev Full Stack JavaScript', 500),
-    ('Programa de Estágio Resilia', 120),
-    ('Programa de Liderança Inovadora', 180),
-    ('Programa de Trainee Resilia', 240);
-    
-INSERT INTO turma (nome, quantidade_alunos, id_curso)
-VALUES
-    ('VAMO AI', 25, 1), -- Onde 1 é o id do curso 'Formação em Análise de Sistemas'
-    ('codigo do amanha', 20, 2), -- Onde 2 é o id do curso 'Formação em Data Analytics'
-    ('resilia', 25, 3), -- Onde 3 é o id do curso 'Formação em WebDev Full Stack Java'
-    ('senac', 20, 4); -- Onde 4 é o id do curso 'Formação em WebDev Full Stack JavaScript'
-  
--- Inserts para a tabela 'facilitador'
-INSERT INTO facilitador (cpf, nome, data_nascimento, email, telefone, habilidade, id_endereco, id_status) VALUES
-('12345678901', 'João da Silva', '1985-03-10', 'joao@gmail.com', '(11) 98765-4321', 'Hardskill', 1, 1),
-('23456789012', 'Carlos Oliveira', '1988-06-20', 'carlos@hotmail.com', '(21) 98765-4322', 'Hardskill', 2, 1),
-('34567890123', 'Ana Pereira', '1986-01-15', 'ana@outlook.com', '(31) 98765-4323', 'Hardskill', 3, 1),
-('45678901234', 'Mariana Santos', '1995-09-05', 'mariana@gmail.com', '(41) 98765-4324', 'Hardskill', 4, 1),
-('56789012345', 'Pedro Oliveira', '1990-03-18', 'pedro@hotmail.com', '(51) 98765-4325', 'Hardskill', 5, 2),
-('67890123456', 'Maria Almeida', '1987-11-30', 'maria@outlook.com', '(61) 98765-4326', 'Hardskill', 6, 2),
-('78901234567', 'José da Silva', '1988-08-22', 'jose@gmail.com', '(71) 98765-4327', 'Hardskill', 7, 2),
-('89012345678', 'Carla Oliveira', '1990-06-12', 'carla@hotmail.com', '(81) 98765-4328', 'Hardskill', 8, 2),
-('90123456789', 'Lucas Santos', '1995-02-03', 'lucas@gmail.com', '(12) 98765-4329', 'Hardskill', 9, 1),
-('01234567890', 'Fernanda Rodrigues', '1990-12-28', 'fernanda@gmail.com', '(22) 98765-4330', 'Softskill', 10, 1),
-('12345678909', 'Rafael Lima', '1988-04-15', 'rafael@hotmail.com', '(32) 98765-4331', 'Softskill', 11, 1),
-('23456789098', 'Isabela Souza', '1989-07-01', 'isabela@outlook.com', '(42) 98765-4332', 'Softskill', 12, 2),
-('34567890187', 'Gustavo Fernandes', '1990-01-10', 'gustavo@gmail.com', '(52) 98765-4333', 'Softskill', 13, 2),
-('45678901276', 'Camila Alves', '1984-11-20', 'camila@hotmail.com', '(62) 98765-4334', 'Softskill', 14, 1),
-('56789012365', 'Thiago Santos', '1990-07-05', 'thiago@outlook.com', '(72) 98765-4335', 'Hardskill', 15, 1),
-('67890123454', 'Amanda Silva', '2002-09-30', 'amanda@gmail.com', '(82) 98765-4336', 'Hardskill', 16, 2),
-('78901234543', 'Matheus Oliveira', '1985-03-17', 'matheus@hotmail.com', '(92) 98765-4337', 'Hardskill', 17, 1),
-('89012345632', 'Larissa Rodrigues', '1984-05-26', 'larissa@outlook.com', '(02) 98765-4338', 'Hardskill', 18, 2),
-('90123456721', 'Bruno Lima', '1983-08-11', 'bruno@gmail.com', '(13) 98765-4339', 'Softskill', 19, 2),
-('01234567810', 'Juliana Fernandes', '1996-02-28', 'juliana@gmail.com', '(23) 98765-4340', 'Hardskill', 20, 1);
-
-INSERT INTO aluno 
-	(cpf, nome, data_nascimento, email, telefone, pcd, id_endereco, id_status, id_turma)
+-- Inserts da tabela Aluno
+INSERT INTO aluno (cpf, nome, data_nascimento, email, telefone, pcd, id_endereco, id_status, id_turma)
 VALUES
 ('24177311260', 'Marli Clarice Aragão', '1951-05-15', 'marli_clarice_aragao@hotmail.com', '(79) 98338-0188', 0, 37, 1, 2),
 ('80974846767', 'Oliver Fernando Novaes"', '1956-03-23', 'oliver.fernando.outlook.com', '(86) 98190-2171', 0, 28, 1, 3),
@@ -202,33 +149,35 @@ VALUES
 ('24647146820', 'Betina Giovanna da Silva', '1997-08-15', 'betina-dasilva82@gmail.com', '(96) 99184-5381', 0, 14, 5, 4),
 ('19477526509', 'Victor Igor Benjamin da Mota', '2002-11-27', 'victorigordamota@gmail.com', '(41) 98940-6683', 0, 19, 1, 2),
 ('01987331435', 'Julio Vinicius Gomes', '1993-09-16', 'julio-gomes71@gmail.com', '(92) 98887-6062', 0, 29, 1, 3);
-#('', '', '', '', '', 0, 45, 3, 3),
-#('', '', '', '', '', 0, 20, 4, 2),
-#('', '', '', '', '', 0, 17, 1, 1),
-#('', '', '', '', '', 0, 49, 1, 4),
-#('', '', '', '', '', 0, 18, 4, 2),
-#('', '', '', '', '', 0, 35, 3, 1),
-#('', '', '', '', '', 1, 40, 2, 4),
-#('', '', '', '', '', 0, 38, 5, 3),
-#('', '', '', '', '', 0, 30, 1, 2),
-#('', '', '', '', '', 0, 13, 1, 4),
-#('', '', '', '', '', 0, 36, 4, 3),
-#('', '', '', '', '', 0, 39, 1, 1),
-#('', '', '', '', '', 0, 44, 3, 3),
-#('', '', '', '', '', 0, 6, 1, 1),
-#('', '', '', '', '', 0, 50, 5, 4),
-#('', '', '', '', '', 0, 21, 1, 2),
-#('', '', '', '', '', 0, 8, 1, 1),
-#('', '', '', '', '', 0, 33, 3, 4),
-#('', '', '', '', '', 0, 16, 4, 3),
-#('', '', '', '', '', 1, 7, 2, 2),
-#('', '', '', '', '', 0, 34, 1, 3),
-#('', '', '', '', '', 0, null, 1, 1),
-#('', '', '', '', '', 0, null, 1, 4),
-#('', '', '', '', '', 0, null, 4, 2),
-#('', '', '', '', '', 0, null, 2, 1),
-#('', '', '', '', '', 0, null, 1, 4),
-#('', '', '', '', '', 0, null, 1, 2),
-#('', '', '', '', '', 0, null, 5, 3),
-#('', '', '', '', '', 0, null, 2, 2),
-#('', '', '', '', '', 0, null, 1, 4);
+-- ('', '', '', '', '', 0, 45, 3, 3),
+-- ('', '', '', '', '', 0, 20, 4, 2),
+-- ('', '', '', '', '', 0, 17, 1, 1),
+-- ('', '', '', '', '', 0, 49, 1, 4),
+-- ('', '', '', '', '', 0, 18, 4, 2),
+-- ('', '', '', '', '', 0, 35, 3, 1),
+-- ('', '', '', '', '', 1, 40, 2, 4),
+-- ('', '', '', '', '', 0, 38, 5, 3),
+-- ('', '', '', '', '', 0, 30, 1, 2),
+-- ('', '', '', '', '', 0, 13, 1, 4),
+-- ('', '', '', '', '', 0, 36, 4, 3),
+-- ('', '', '', '', '', 0, 39, 1, 1),
+-- ('', '', '', '', '', 0, 44, 3, 3),
+-- ('', '', '', '', '', 0, 6, 1, 1),
+-- ('', '', '', '', '', 0, 50, 5, 4),
+-- ('', '', '', '', '', 0, 21, 1, 2),
+-- ('', '', '', '', '', 0, 8, 1, 1),
+-- ('', '', '', '', '', 0, 33, 3, 4),
+-- ('', '', '', '', '', 0, 16, 4, 3),
+-- ('', '', '', '', '', 1, 7, 2, 2),
+-- ('', '', '', '', '', 0, 34, 1, 3),
+-- ('', '', '', '', '', 0, null, 1, 1),
+-- ('', '', '', '', '', 0, null, 1, 4),
+-- ('', '', '', '', '', 0, null, 4, 2),
+-- ('', '', '', '', '', 0, null, 2, 1),
+-- ('', '', '', '', '', 0, null, 1, 4),
+-- ('', '', '', '', '', 0, null, 1, 2),
+-- ('', '', '', '', '', 0, null, 5, 3),
+-- ('', '', '', '', '', 0, null, 2, 2),
+-- ('', '', '', '', '', 0, null, 1, 4);
+
+-- Inserts da tabela Log
