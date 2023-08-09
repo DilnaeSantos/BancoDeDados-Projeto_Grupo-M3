@@ -1,4 +1,4 @@
-create database resilientes
-default character set utf8mb4 # definir caractere utf8 
-default collate utf8mb4_general_ci
-; # criar bancos de dados
+-- Cria o banco de dados
+CREATE DATABASE IF NOT EXISTS resilientes
+DEFAULT CHARACTER SET UTF8MB4 -- Define UTF-8 como padrão de codificação de caracteres
+DEFAULT COLLATE utf8mb4_general_ci;

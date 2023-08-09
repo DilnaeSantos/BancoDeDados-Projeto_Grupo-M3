@@ -6,14 +6,14 @@
 -- Tabela cursos - Tawany
 
 -- Tabela Curso
-CREATE TABLE `curso` (
+CREATE TABLE IF NOT EXISTS `curso` (
     `id_curso` INT PRIMARY KEY AUTO_INCREMENT,
     `nome` VARCHAR(100) NOT NULL,
     `carga_horaria` INT
 )  DEFAULT CHARSET=UTF8MB4;
 
 -- Tabela Módulo
-CREATE TABLE `modulo` (
+CREATE TABLE IF NOT EXISTS `modulo` (
     `id_modulo` INT PRIMARY KEY AUTO_INCREMENT,
     `numero_modulo` INT NOT NULL,
     `nome` VARCHAR(100) NOT NULL
@@ -86,7 +86,7 @@ CREATE TABLE `aluno` (
 )  DEFAULT CHARSET=UTF8MB4;
 
 -- Tabela Log
-CREATE TABLE `log` (
+CREATE TABLE IF NOT EXISTS `log` (
     `id_log` INT PRIMARY KEY AUTO_INCREMENT,
     `data_hora` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     `acao` VARCHAR(100) NOT NULL,
