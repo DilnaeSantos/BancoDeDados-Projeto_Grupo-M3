@@ -1,4 +1,35 @@
 -- Inserts tabela estudantes - Dilnae
+-- Segundo conjunto de inserts (30 registros)
+('27640613724', 'Lucas Gabriel Silva', '2003-05-12', 'lucas.gabriel.silva@gmail.com', '(67) 99111-2233', 0, 51, 1, 2),
+('74930253618', 'Isabelle Carla de Paula', '1995-10-20', 'isabelle.carla.paula@hotmail.com', '(83) 98555-6677', 0, 52, 3, 3),
+('41630587168', 'Lavinia Alana Camila Rodrigues', '2002-01-11', 'lavinia.alana.camila@hotmail.com', '(92) 98272-5566', 0, 53, 4, 4),
+('10987654321', 'Eduardo Ribeiro', '2000-09-05', 'eduardo.ribeiro@gmail.com', '(86) 98888-0000', 0, 54, 1, 1),
+('99988877766', 'João Victor Silva', '1998-11-30', 'joao_victor_silva@gmail.com', '(92) 99111-1111', 0, 55, 1, 2),
+('55544433322', 'Caroline Camila Lima', '1999-12-10', 'caroline.camila.lima@hotmail.com', '(11) 98765-4321', 1, 56, 1, 3),
+('11122233344', 'Pedro Henrique Oliveira', '2002-07-18', 'pedro.henrique.oliveira@gmail.com', '(84) 98888-1111', 0, 57, 2, 4),
+('66655544433', 'Lucas Gabriel Pereira', '2003-03-09', 'lucas.gabriel.pereira@hotmail.com', '(21) 98765-4321', 0, 58, 3, 1),
+('77788899900', 'Giovanna Lima', '2004-01-20', 'giovanna.lima@hotmail.com', '(92) 99999-8888', 0, 59, 1, 2),
+('98765432109', 'Rafael Martins', '2001-06-15', 'rafael.martins@gmail.com', '(81) 98888-7777', 0, 60, 1, 3),
+('12345678909', 'Larissa Sousa', '2002-10-18', 'larissa.sousa@hotmail.com', '(98) 98888-6666', 0, 61, 3, 4),
+('34567890123', 'Ana Laura Silva', '2000-09-30', 'ana.laura.silva@gmail.com', '(83) 98888-5555', 0, 62, 1, 1),
+('56789012345', 'Felipe Oliveira', '2001-03-25', 'felipe.oliveira@hotmail.com', '(92) 98888-4444', 0, 63, 2, 2),
+('78901234567', 'Mariana Almeida', '2003-08-05', 'mariana.almeida@gmail.com', '(81) 98888-3333', 0, 64, 3, 3),
+('90123456789', 'Vinicius Santos', '2004-11-10', 'vinicius.santos@hotmail.com', '(86) 98888-2222', 0, 65, 1, 4),
+('32109876543', 'Juliana Lima', '1999-04-07', 'juliana.lima@hotmail.com', '(21) 98888-1111', 1, 66, 1, 1),
+('65432109876', 'Matheus Silva', '2001-12-22', 'matheus.silva@gmail.com', '(84) 98888-0000', 0, 67, 1, 2),
+('87654321098', 'Gabriela Oliveira', '1998-02-14', 'gabriela.oliveira@hotmail.com', '(98) 98888-9999', 0, 68, 3, 3),
+('23456789012', 'Lucas Santos', '2003-07-09', 'lucas.santos@gmail.com', '(81) 98888-8888', 0, 69, 2, 4),
+('45678901234', 'Isabela Almeida', '2002-09-12', 'isabela.almeida@hotmail.com', '(86) 98888-7777', 0, 70, 4, 1),
+('67890123456', 'Rafaela Lima', '2000-05-23', 'rafaela.lima@gmail.com', '(21) 98888-6666', 0, 71, 1, 2),
+('09876543210', 'Pedro Oliveira', '2004-10-17', 'pedro.oliveira@hotmail.com', '(92) 98888-5555', 0, 72, 3, 3),
+('34567890123', 'Ana Laura Silva', '2000-09-30', 'ana.laura.silva@gmail.com', '(83) 98888-4444', 0, 73, 1, 4),
+('56789012345', 'Felipe Oliveira', '2001-03-25', 'felipe.oliveira@hotmail.com', '(92) 98888-3333', 0, 74, 2, 1),
+('78901234567', 'Mariana Almeida', '2003-08-05', 'mariana.almeida@gmail.com', '(81) 98888-2222', 1, 75, 3, 2),
+('90123456789', 'Vinicius Santos', '2004-11-10', 'vinicius.santos@hotmail.com', '(86) 98888-1111', 0, 76, 4, 3),
+('34567890123', 'Ana Laura Silva', '2000-09-30', 'ana.laura.silva@gmail.com', '(83) 98888-0000', 0, 77, 1, 4),
+('56789012345', 'Felipe Oliveira', '2001-03-25', 'felipe.oliveira@hotmail.com', '(92) 98888-9999', 0, 78, 2, 1),
+('78901234567', 'Mariana Almeida', '2003-08-05', 'mariana.almeida@gmail.com', '(81) 98888-8888', 0, 79, 3, 2),
+('90123456789', 'Vinicius Santos', '2004-11-10', 'vinicius.santos@hotmail.com', '(86) 98888-7777', 0, 80, 4, 3);
 -- Inserts tabela pessoas facilitadoras - Denise
 -- Inserts para a tabela 'facilitador'
 
