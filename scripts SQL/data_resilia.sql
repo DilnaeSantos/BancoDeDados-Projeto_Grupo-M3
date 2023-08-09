@@ -181,3 +181,7 @@ VALUES
 -- ('', '', '', '', '', 0, null, 1, 4);
 
 -- Inserts da tabela Log
+INSERT INTO log (acao, status_anterior, status_atual, id_aluno)
+VALUES
+(),
+();
