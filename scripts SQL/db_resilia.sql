@@ -92,6 +92,6 @@ CREATE TABLE IF NOT EXISTS `log` (
     `status_anterior` VARCHAR(50) NOT NULL,
     `id_aluno` INT,
     `id_status` INT, -- Referente ao "Status Atual" do aluno no Curso-Turma-Módulo.
-    FOREIGN KEY (`id_aluno`) REFERENCES `aluno` (`id_aluno`)
-    FOREIGN KEY (`id_status`) REFERENCES `aluno` (`id_status`),
+    FOREIGN KEY (`id_aluno`) REFERENCES `aluno` (`id_aluno`),
+    FOREIGN KEY (`id_status`) REFERENCES `aluno` (`id_status`)
 )  DEFAULT CHARSET=UTF8MB4;
