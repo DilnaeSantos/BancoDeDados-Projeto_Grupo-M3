@@ -15,8 +15,22 @@ VALUES
 -- Inserts da tabela Módulo
 INSERT INTO modulo (numero_modulo, nome)
 VALUES
-    (),
-    ();
+    (0),
+    (1),
+    (1),
+    (1),
+    (2),
+    (2),
+    (2),
+    (3),
+    (3),
+    (4),
+    (4),
+    (4),
+    (5),
+    (5),
+    (5),
+    (5);
 
 -- Inserts da tabela Status
 INSERT INTO status (situacao)
