@@ -128,6 +128,26 @@ VALUES
     ('Resilia', 15, 3), -- Onde 3 é o id do curso "Formação em WebDev Full Stack Java".
     ('Senac RJ', 15, 4); -- Onde 4 é o id do curso "Formação em WebDev Full Stack JavaScript".
 
+-- Atualizar turma com id_turma = 1
+UPDATE turma
+SET id_status = 4
+WHERE id_turma = 1;
+
+-- Atualizar turma com id_turma = 2
+UPDATE turma
+SET id_status = 1
+WHERE id_turma = 2;
+
+-- Atualizar turma com id_turma = 3
+UPDATE turma
+SET id_status = 1
+WHERE id_turma = 3;
+
+-- Atualizar turma com id_turma = 4
+UPDATE turma
+SET id_status = 4
+WHERE id_turma = 4;
+
 -- Inserts da tabela Facilitador - Denise
 INSERT INTO facilitador (cpf, nome, data_nascimento, email, telefone, habilidade, id_endereco, id_status)
 VALUES
