@@ -155,8 +155,86 @@ VALUES
 -- Inserts da tabela Intermediária Curso-Módulo-Facilitador 
 INSERT INTO curso_modulo_facilitador (id_curso, id_modulo, id_facilitador)
 VALUES
-    (),
-    ();
+       -- Formação em Análise de Sistemas
+    -- Módulo 0
+    (1, 1, 1),  -- Introdução ao Curso - João da Silva (Hard Skill)
+    (1, 1, 10), -- Introdução ao Curso - Fernanda Rodrigues (Soft Skill)
+    -- Módulo 1
+    (1, 2, 1),  -- Introdução ao Front-End e Criação de Hábitos - João da Silva (Hard Skill)
+    (1, 2, 10), -- Introdução ao Front-End e Criação de Hábitos - Fernanda Rodrigues (Soft Skill)
+    -- Módulo 2
+    (1, 7, 2),  -- Técnicas de Levantamento de Requisitos e Gerenciamento de Projetos - Carlos Oliveira (Hard Skill)
+    (1, 7, 10), -- Técnicas de Levantamento de Requisitos e Gerenciamento de Projetos - Fernanda Rodrigues (Soft Skill)
+    -- Módulo 3
+    (1, 9, 2),  -- Verificação de Requisitos e Inovação - Carlos Oliveira (Hard Skill)
+    (1, 9, 10), -- Verificação de Requisitos e Inovação - Fernanda Rodrigues (Soft Skill)
+    -- Módulo 4
+    (1, 11, 3),  -- Modelagem de Sistemas e Comunicação de Resultados Complexos - Ana Pereira (Hard Skill)
+    (1, 11, 10), -- Modelagem de Sistemas e Comunicação de Resultados Complexos - Fernanda Rodrigues (Soft Skill)
+    -- Módulo 5
+    (1, 16, 3), -- Implementação de Sistemas e Liderança - Ana Pereira (Hard Skill)
+    (1, 16, 10), -- Implementação de Sistemas e Liderança - Fernanda Rodrigues (Hard Skill)
+
+    -- Formação em Data Analytics
+    -- Módulo 0
+    (2, 1, 4),  -- Introdução ao Curso - Mariana Santos (Hard Skill)
+    (2, 1, 11), -- Introdução ao Curso - Rafael Lima (Soft Skill)
+    -- Módulo 1
+    (2, 3, 4),  -- Fundamentos de Data Analytics e Pensamento Analítico Fundacional - Mariana Santos (Hard Skill)
+    (2, 3, 11), -- Fundamentos de Data Analytics e Pensamento Analítico Fundacional - Rafael Lima (Soft Skill)
+    -- Módulo 2
+    (2, 6, 9),  -- Análise Exploratória de Dados e Descoberta de Insights - Lucas Santos (Hard Skill)
+    (2, 6, 11), -- Análise Exploratória de Dados e Descoberta de Insights - Rafael Lima (Soft Skill)
+    -- Módulo 3
+    (2, 8, 9),  -- Modelos de Armazenamento de Dados e Relacionamento Interpessoal- Lucas Santos (Hard Skill)
+    (2, 8, 11), -- Modelos de Armazenamento de Dados e Relacionamento Interpessoal - Rafael Lima (Soft Skill)
+    -- Módulo 4
+    (2, 11, 15), -- Modelagem de Sistemas e Comunicação de Resultados Complexos- Thiago Santos (Hard Skill)
+    (2, 11, 11), -- Modelagem de Sistemas e Comunicação de Resultados Complexos - Rafael Lima (Soft Skill)
+    -- Módulo 5
+    (2, 14, 15), -- Big Data e Pensamento Estratégico - Thiago Santos (Hard Skill)
+    (2, 14, 11), -- Big Data e Pensamento Estratégico - Rafael Lima (Soft Skill)
+
+    -- Formação em WebDev Full Stack Java
+    -- Módulo 0
+    (3, 1, 17),  -- Introdução ao Curso - Matheus Oliveira (Hard Skill)
+    (3, 1, 14), -- Introdução ao Curso - Camila Alves (Soft Skill)
+    -- Módulo 1
+    (3, 2, 17),  -- Introdução ao Front-End e Criação de Hábitos - Matheus Oliveira (Hard Skill)
+    (3, 2, 14), -- Introdução ao Front-End e Criação de Hábitos - Camila Alves (Soft Skill)
+    -- Módulo 2
+    (3, 5, 20),  -- Orientação a Objetos e Inteligência Emocional - Juliana Fernandes (Hard Skill)
+    (3, 5, 14), -- Orientação a Objetos e Inteligência Emocional - Camila Alves (Soft Skill)
+    -- Módulo 3
+    (3, 8, 20),  -- Modelos de Armazenamento de Dados e Relacionamento Interpessoal - Juliana Fernandes (Hard Skill)
+    (3, 8, 14), -- Modelos de Armazenamento de Dados e Relacionamento Interpessoal - Camila Alves (Soft Skill)
+    -- Módulo 4
+    (3, 12, 20),  -- Desenvolvimento Back-End com Java e Aprendizado Contínuo - Juliana Fernandes (Hard Skill)
+    (3, 12, 14), -- Desenvolvimento Back-End com Java e Aprendizado Contínuo - Camila Alves (Soft Skill)
+    -- Módulo 5
+    (3, 15, 20),  -- Construção de Aplicações Full Stack e Colaboração - Juliana Fernandes (Hard Skill)
+    (3, 15, 14), -- Construção de Aplicações Full Stack e Colaboração - Camila Alves (Soft Skill)
+
+    -- Formação em WebDev Full Stack JavaScript
+    -- Módulo 0
+    (4, 1, 17),  -- Introdução ao Curso - Matheus Oliveira (Hard Skill)
+    (4, 1, 14), -- Introdução ao Curso - Camila Alves (Soft Skill)
+    -- Módulo 1
+    (4, 2, 17),  -- Introdução ao Front-End e Criação de Hábitos - Matheus Oliveira (Hard Skill)
+    (4, 2, 14), -- Introdução ao Front-End e Criação de Hábitos - Camila Alves (Soft Skill)
+    -- Módulo 2
+    (4, 5, 20),  -- Orientação a Objetos e Inteligência Emocional - Juliana Fernandes (Hard Skill)
+    (4, 5, 14), -- Orientação a Objetos e Inteligência Emocional - Camila Alves(Soft Skill)
+    -- Módulo 3
+    (4, 8, 20),  -- Modelos de Armazenamento de Dados e Relacionamento Interpessoal - Juliana Fernandes (Hard Skill)
+    (4, 8, 14), -- Modelos de Armazenamento de Dados e Relacionamento Interpessoal - Camila Alves (Soft Skill)
+    -- Módulo 4
+    (4, 10, 20),  -- Tecnologias Back-End e Metodologias Ágeis - Juliana Fernandes (Hard Skill)
+    (4, 10, 14), -- Tecnologias Back-End e Metodologias Ágeis - Camila Alves (Soft Skill)
+    -- Módulo 5
+    (4, 13, 20),  -- Tecnologias Front-End e Postura Profissional - Juliana Fernandes (Hard Skill)
+    (4, 13, 14); -- Tecnologias Front-End e Postura Profissional - Camila Alves (Soft Skill)
+
 
 -- Inserts da tabela Aluno - Dilnae
 INSERT INTO aluno (cpf, nome, data_nascimento, email, telefone, pcd, id_endereco, id_status, id_turma)
