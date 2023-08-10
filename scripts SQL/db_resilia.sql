@@ -36,6 +36,10 @@ CREATE TABLE IF NOT EXISTS `turma` (
     FOREIGN KEY (`id_curso`) REFERENCES `curso` (`id_curso`)
 )  DEFAULT CHARSET=UTF8MB4;
 
+ALTER TABLE `turma`
+ADD COLUMN `id_status` INT,
+ADD FOREIGN KEY (`id_status`) REFERENCES `status` (`id_status`);
+
 -- Tabela Facilitador
 CREATE TABLE IF NOT EXISTS `facilitador` (
     `id_facilitador` INT PRIMARY KEY AUTO_INCREMENT,
