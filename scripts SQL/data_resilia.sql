@@ -152,7 +152,7 @@ VALUES
     ('90123456721', 'Bruno Lima', '1983-08-11', 'bruno@gmail.com', '(13) 98765-4339', 'Soft Skill', 19, 2),
     ('01234567810', 'Juliana Fernandes', '1996-02-28', 'juliana@gmail.com', '(23) 98765-4340', 'Hard Skill', 20, 1);
 
--- Inserts da tabela Intermediária Curso-Módulo-Facilitador
+-- Inserts da tabela Intermediária Curso-Módulo-Facilitador 
 INSERT INTO curso_modulo_facilitador (id_curso, id_modulo, id_facilitador)
 VALUES
     (),
