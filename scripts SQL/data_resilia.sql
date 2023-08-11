@@ -106,7 +106,7 @@ VALUES
     (4, 'Tecnologias Back-End e Metodologias Ágeis'), -- Referente ao curso "WebDev Full Stack JavaScript".
     (4, 'Modelagem de Sistemas e Comunicação de Resultados Complexos'), -- Referente aos cursos "Data Analytics" e "Análise de Sistemas".
     (4, 'Desenvolvimento Back-End com Java e Aprendizado Contínuo'), -- Referente ao curso "WebDev Full Stack Java".
-    (5, 'Tecnologias Front-End e Postura Profissional'), -- Referente ao curso "WebDev Full Stack Java".
+    (5, 'Tecnologias Front-End e Postura Profissional'), -- Referente ao curso "WebDev Full Stack JavaScript".
     (5, 'Big Data e Pensamento Estratégico'), -- Referente ao curso "Data Analytics".
     (5, 'Construção de Aplicações Full Stack e Colaboração'), -- Referente ao curso "WebDev Full Stack Java".
     (5, 'Implementação de Sistemas e Liderança'); -- Referente ao curso "Análise de Sistemas".
