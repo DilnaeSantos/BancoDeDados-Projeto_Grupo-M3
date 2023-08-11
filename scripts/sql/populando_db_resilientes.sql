@@ -361,7 +361,5 @@ VALUES
 
 
 -- Inserts da tabela Log 
-INSERT INTO log ()
+INSERT INTO log (status_anterior, id_aluno, id_status)
 VALUES
-    (),
-    ();
