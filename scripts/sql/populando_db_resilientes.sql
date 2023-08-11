@@ -362,4 +362,4 @@ VALUES
 
 -- Inserts da tabela Log 
 INSERT INTO log (status_anterior, id_aluno, id_status)
-VALUES
+VALUES();
