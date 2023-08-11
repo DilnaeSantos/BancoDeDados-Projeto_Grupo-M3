@@ -360,8 +360,8 @@ VALUES
     UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '58');
 
 
--- Inserts da tabela Log - Denise
-INSERT INTO log (acao, status_anterior, status_atual, id_aluno)
+-- Inserts da tabela Log 
+INSERT INTO log ()
 VALUES
     (),
     ();
