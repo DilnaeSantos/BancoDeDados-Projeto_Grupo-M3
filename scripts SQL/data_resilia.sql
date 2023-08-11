@@ -320,6 +320,45 @@ VALUES
     ('03456789098', 'Bruna Rodrigues', '2001-02-12', 'bruna.rodrigues@gmail.com', '(81) 98888-1098', 0, 79, 2, 1),
     ('87654321234', 'Giovanni Santos', '1998-11-19', 'giovanni.santos@hotmail.com', '(86) 98888-9876', 1, 79, 3, 2);
 
+    -- update alunos turma 1
+    UPDATE `resilientes`.`aluno` SET `pcd` = '1', `id_status` = '4' WHERE (`id_aluno` = '55');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '5' WHERE (`id_aluno` = '3');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '7');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '12');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '24');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '3' WHERE (`id_aluno` = '34');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '18');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '30');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '47');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '51');
+    UPDATE `resilientes`.`aluno` SET `pcd` = '1', `id_status` = '4' WHERE (`id_aluno` = '59');
+    -- update alunos turma 2
+    UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '5');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '31');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '42');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '48');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '52');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '56');
+    -- update alunos turma 3
+    UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '57');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '23');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '5' WHERE (`id_aluno` = '43');
+    UPDATE `resilientes`.`aluno` SET `pcd` = '1', `id_status` = '1' WHERE (`id_aluno` = '49');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '32');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '36');
+    -- update alunos turma 4
+    UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '8');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '11');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '16');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '20');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '5' WHERE (`id_aluno` = '28');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '33');
+    UPDATE `resilientes`.`aluno` SET `pcd` = '1', `id_status` = '3' WHERE (`id_aluno` = '37');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '41');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '5' WHERE (`id_aluno` = '46');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '50');
+    UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '58');
+
 
 -- Inserts da tabela Log - Denise
 INSERT INTO log (acao, status_anterior, status_atual, id_aluno)
