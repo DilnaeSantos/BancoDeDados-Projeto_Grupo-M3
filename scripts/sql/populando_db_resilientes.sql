@@ -1,4 +1,3 @@
-
 -- Inserts da tabela Curso
 INSERT INTO curso (nome, carga_horaria)
 VALUES
@@ -256,7 +255,6 @@ VALUES
     (4, 13, 20),  -- Tecnologias Front-End e Postura Profissional - Juliana Fernandes (Hard Skill)
     (4, 13, 14); -- Tecnologias Front-End e Postura Profissional - Camila Alves (Soft Skill)
 
-
 -- Inserts da tabela Aluno
 INSERT INTO aluno (cpf, nome, data_nascimento, email, telefone, pcd, id_endereco, id_status, id_turma)
 VALUES
@@ -321,7 +319,7 @@ VALUES
     ('03456789098', 'Bruna Rodrigues', '2001-02-12', 'bruna.rodrigues@gmail.com', '(81) 98888-1098', 0, 79, 2, 1),
     ('87654321234', 'Giovanni Santos', '1998-11-19', 'giovanni.santos@hotmail.com', '(86) 98888-9876', 1, 79, 3, 2);
 
-    -- Update - Alunos Turma 1
+    -- Update - Alunos - Turma 1
     UPDATE `resilientes`.`aluno` SET `pcd` = '1', `id_status` = '4' WHERE (`id_aluno` = '55');
     UPDATE `resilientes`.`aluno` SET `id_status` = '5' WHERE (`id_aluno` = '3');
     UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '7');
@@ -333,21 +331,21 @@ VALUES
     UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '47');
     UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '51');
     UPDATE `resilientes`.`aluno` SET `pcd` = '1', `id_status` = '4' WHERE (`id_aluno` = '59');
-    -- Update - Alunos Turma 2
+    -- Update - Alunos - Turma 2
     UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '5');
     UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '31');
     UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '42');
     UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '48');
     UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '52');
     UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '56');
-    -- Update - Alunos Turma 3
+    -- Update - Alunos - Turma 3
     UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '57');
     UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '23');
     UPDATE `resilientes`.`aluno` SET `id_status` = '5' WHERE (`id_aluno` = '43');
     UPDATE `resilientes`.`aluno` SET `pcd` = '1', `id_status` = '1' WHERE (`id_aluno` = '49');
     UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '32');
     UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '36');
-    -- Update - Alunos Turma 4
+    -- Update - Alunos - Turma 4
     UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '8');
     UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '11');
     UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '16');
