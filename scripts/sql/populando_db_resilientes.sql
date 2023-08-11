@@ -1,5 +1,5 @@
 
--- Inserts da tabela Curso
+-- Inserts da tabela Curso - Tawany
 INSERT INTO curso (nome, carga_horaria)
 VALUES
     ('Formação em Análise de Sistemas', 180),
@@ -7,10 +7,9 @@ VALUES
     ('Formação em WebDev Full Stack Java', 360),
     ('Formação em WebDev Full Stack JavaScript', 500);
 
--- Inserts da tabela Endereço
-INSERT INTO endereco (logradouro, cidade, estado, cep)
-VALUES
--- Endereço dos Facilitadores
+-- Inserts tabela endereço - Denise
+INSERT INTO endereco (logradouro, cidade, estado, cep) VALUES
+-- Endereço facilitadores
 ('Rua das Flores, 123', 'São Paulo', 'SP', '01234-567'),
 ('Avenida Principal, 456', 'Rio de Janeiro', 'RJ', '20000-001'),
 ('Praça da Liberdade, 789', 'Belo Horizonte', 'MG', '30140-010'),
@@ -31,7 +30,7 @@ VALUES
 ('Avenida das Gaivotas, 890', 'João Pessoa', 'PB', '58000-123'),
 ('Alameda dos Ipês, 123', 'Campo Grande', 'MS', '79000-456'),
 ('Estrada da Serra, 456', 'Teresina', 'PI', '64000-789'),
--- Endereço dos Estudantes
+-- Endereço estudantes
 ('Rua do Bosque, 789', 'Maceió', 'AL', '57000-234'),
 ('Avenida das Dunas, 234', 'Aracaju', 'SE', '49000-567'),
 ('Praça Central, 567', 'Boa Vista', 'RR', '69300-890'),
@@ -92,7 +91,7 @@ VALUES
 ('Rua dos Sabores, 890', 'Maceió', 'AL', '57000-456'),
 ('Avenida das Churrascarias, 123', 'Arapiraca', 'AL', '57300-789');
 
--- Inserts da tabela Módulo
+-- Inserts da tabela Módulo - Tawany
 INSERT INTO modulo (numero_modulo, nome)
 VALUES
     (0, 'Introdução ao Curso'), -- Referente a todos os cursos.
@@ -107,12 +106,12 @@ VALUES
     (4, 'Tecnologias Back-End e Metodologias Ágeis'), -- Referente ao curso "WebDev Full Stack JavaScript".
     (4, 'Modelagem de Sistemas e Comunicação de Resultados Complexos'), -- Referente aos cursos "Data Analytics" e "Análise de Sistemas".
     (4, 'Desenvolvimento Back-End com Java e Aprendizado Contínuo'), -- Referente ao curso "WebDev Full Stack Java".
-    (5, 'Tecnologias Front-End e Postura Profissional'), -- Referente ao curso "WebDev Full Stack JavaScript".
+    (5, 'Tecnologias Front-End e Postura Profissional'), -- Referente ao curso "WebDev Full Stack Java".
     (5, 'Big Data e Pensamento Estratégico'), -- Referente ao curso "Data Analytics".
     (5, 'Construção de Aplicações Full Stack e Colaboração'), -- Referente ao curso "WebDev Full Stack Java".
     (5, 'Implementação de Sistemas e Liderança'); -- Referente ao curso "Análise de Sistemas".
 
--- Inserts da tabela Status
+-- Inserts da tabela Status - Dilnae
 INSERT INTO status (situacao)
 VALUES
     ('Ativo'),
@@ -121,7 +120,7 @@ VALUES
     ('Concluído'),
     ('Reprovado');
 
--- Inserts da tabela Turma
+-- Inserts da tabela Turma - José
 INSERT INTO turma (nome, quantidade_alunos, id_curso)
 VALUES
     ('Vamo Ai - iFood', 15, 1), -- Onde 1 é o id do curso "Formação em Análise de Sistemas".
@@ -129,27 +128,27 @@ VALUES
     ('Resilia', 15, 3), -- Onde 3 é o id do curso "Formação em WebDev Full Stack Java".
     ('Senac RJ', 15, 4); -- Onde 4 é o id do curso "Formação em WebDev Full Stack JavaScript".
 
--- Atualiza Turma com id_turma = 1
+-- Atualizar turma com id_turma = 1
 UPDATE turma
 SET id_status = 4
 WHERE id_turma = 1;
 
--- Atualiza Turma com id_turma = 2
+-- Atualizar turma com id_turma = 2
 UPDATE turma
 SET id_status = 1
 WHERE id_turma = 2;
 
--- Atualiza Turma com id_turma = 3
+-- Atualizar turma com id_turma = 3
 UPDATE turma
 SET id_status = 1
 WHERE id_turma = 3;
 
--- Atualiza Turma com id_turma = 4
+-- Atualizar turma com id_turma = 4
 UPDATE turma
 SET id_status = 4
 WHERE id_turma = 4;
 
--- Inserts da tabela Facilitador
+-- Inserts da tabela Facilitador - Denise
 INSERT INTO facilitador (cpf, nome, data_nascimento, email, telefone, habilidade, id_endereco, id_status)
 VALUES
     ('12345678901', 'João da Silva', '1985-03-10', 'joao@gmail.com', '(11) 98765-4321', 'Hard Skill', 1, 1),
@@ -176,7 +175,7 @@ VALUES
 -- Inserts da tabela Intermediária Curso-Módulo-Facilitador 
 INSERT INTO curso_modulo_facilitador (id_curso, id_modulo, id_facilitador)
 VALUES
-    -- Formação em Análise de Sistemas
+       -- Formação em Análise de Sistemas
     -- Módulo 0
     (1, 1, 1),  -- Introdução ao Curso - João da Silva (Hard Skill)
     (1, 1, 10), -- Introdução ao Curso - Fernanda Rodrigues (Soft Skill)
@@ -257,7 +256,7 @@ VALUES
     (4, 13, 14); -- Tecnologias Front-End e Postura Profissional - Camila Alves (Soft Skill)
 
 
--- Inserts da tabela Aluno
+-- Inserts da tabela Aluno - Dilnae
 INSERT INTO aluno (cpf, nome, data_nascimento, email, telefone, pcd, id_endereco, id_status, id_turma)
 VALUES
     ('24177311260', 'Marli Clarice Aragão', '1951-05-15', 'marli_clarice_aragao@hotmail.com', '(79) 98338-0188', 0, 21, 1, 2),
@@ -321,7 +320,7 @@ VALUES
     ('03456789098', 'Bruna Rodrigues', '2001-02-12', 'bruna.rodrigues@gmail.com', '(81) 98888-1098', 0, 79, 2, 1),
     ('87654321234', 'Giovanni Santos', '1998-11-19', 'giovanni.santos@hotmail.com', '(86) 98888-9876', 1, 79, 3, 2);
 
-    -- Update - Alunos - Turma 1
+    -- update alunos turma 1
     UPDATE `resilientes`.`aluno` SET `pcd` = '1', `id_status` = '4' WHERE (`id_aluno` = '55');
     UPDATE `resilientes`.`aluno` SET `id_status` = '5' WHERE (`id_aluno` = '3');
     UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '7');
@@ -333,21 +332,21 @@ VALUES
     UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '47');
     UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '51');
     UPDATE `resilientes`.`aluno` SET `pcd` = '1', `id_status` = '4' WHERE (`id_aluno` = '59');
-    -- Update - Alunos - Turma 2
+    -- update alunos turma 2
     UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '5');
     UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '31');
     UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '42');
     UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '48');
     UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '52');
     UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '56');
-    -- Update - Alunos - Turma 3
+    -- update alunos turma 3
     UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '57');
     UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '23');
     UPDATE `resilientes`.`aluno` SET `id_status` = '5' WHERE (`id_aluno` = '43');
     UPDATE `resilientes`.`aluno` SET `pcd` = '1', `id_status` = '1' WHERE (`id_aluno` = '49');
     UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '32');
     UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '36');
-    -- Update - Alunos - Turma 4
+    -- update alunos turma 4
     UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '8');
     UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '11');
     UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '16');
@@ -361,8 +360,38 @@ VALUES
     UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '58');
 
 
--- Inserts da tabela Log
-INSERT INTO log (acao, status_anterior, status_atual, id_aluno)
+-- Inserts da tabela Log 
+INSERT INTO log (status_anterior, id_aluno, id_status)
 VALUES
-    (),
-    ();
+    ('Ativo', 4, 4),    -- Juan Iago Souza (ID: 4) - Mudança para Concluído (ID: 4)
+    ('Ativo', 5, 2),    -- Marcela Valentina Nicole Fogaça (ID: 5) - Mudança para Inativo (ID: 2)
+    ('Ativo', 6, 3),    -- Levi Tomás Cauê Moura (ID: 6) - Mudança para Evadido (ID: 3)
+    ('Ativo', 9, 4),    -- Junior Costa (ID: 9) - Mudança para Concluído (ID: 4)
+    ('Ativo', 13, 5),   -- Clarice Antônia da Luz (ID: 13) - Mudança para Reprovado (ID: 5)
+    ('Ativo', 15, 3),   -- Lucca Juan Carvalho (ID: 15) - Mudança para Evadido (ID: 3)
+    ('Ativo', 17, 4),   -- Lúcia Nina da Paz (ID: 17) - Mudança para Concluído (ID: 4)
+    ('Ativo', 18, 2),   -- Pedro Bento Monteiro (ID: 18) - Mudança para Inativo (ID: 2)
+    ('Ativo', 22, 3),   -- Vanessa Bianca Rosângela Pinto (ID: 22) - Mudança para Evadido (ID: 3)
+    ('Ativo', 23, 2),   -- Liz Sophia Isis Oliveira (ID: 23) - Mudança para Inativo (ID: 2)
+    ('Ativo', 25, 4),   -- Matheus Enrico Costa (ID: 25) - Mudança para Concluído (ID: 4)
+    ('Ativo', 28, 2),   -- Pedro Henrique Oliveira (ID: 28) - Mudança para Inativo (ID: 2)
+    ('Ativo', 29, 3),   -- Lucas Gabriel Pereira (ID: 29) - Mudança para Evadido (ID: 3)
+    ('Ativo', 31, 2),   -- Felipe Oliveira (ID: 31) - Mudança para Inativo (ID: 2)
+    ('Ativo', 32, 3),   -- Mariana Almeida (ID: 32) - Mudança para Evadido (ID: 3)
+    ('Ativo', 36, 3),   -- Gabriela Oliveira (ID: 36) - Mudança para Evadido (ID: 3)
+    ('Ativo', 37, 2),   -- Lucas Santos (ID: 37) - Mudança para Inativo (ID: 2)
+    ('Ativo', 38, 4),   -- Isabela Almeida (ID: 38) - Mudança para Concluído (ID: 4)
+    ('Ativo', 40, 3),   -- Pedro Oliveira (ID: 40) - Mudança para Evadido (ID: 3)
+    ('Ativo', 42, 3),   -- Thiago Oliveira (ID: 42) - Mudança para Evadido (ID: 3)
+    ('Ativo', 43, 2),   -- Alice Rodrigues (ID: 43) - Mudança para Inativo (ID: 2)
+    ('Ativo', 44, 4),   -- Gustavo Lima (ID: 44) - Mudança para Concluído (ID: 4)
+    ('Ativo', 46, 3),   -- Ricardo Silva (ID: 46) - Mudança para Evadido (ID: 3)
+    ('Ativo', 48, 4),   -- Luiz Almeida (ID: 48) - Mudança para Concluído (ID: 4)
+    ('Ativo', 49, 2),   -- Isabella Carvalho (ID: 49) - Mudança para Inativo (ID: 2)
+    ('Ativo', 51, 2),   -- Lorena Lima (ID: 51) - Mudança para Inativo (ID: 2)
+    ('Ativo', 52, 3),   -- Rodrigo Santos (ID: 52) - Mudança para Evadido (ID: 3)
+    ('Ativo', 54, 4),   -- Pedro Rodrigues (ID: 54) - Mudança para Concluído (ID: 4)
+    ('Ativo', 56, 3),   -- Felipe Almeida (ID: 56) - Mudança para Evadido (ID: 3)
+    ('Ativo', 57, 2),   -- Aline Oliveira (ID: 57) - Mudança para Inativo (ID: 2)
+    ('Ativo', 59, 2),   -- Bruna Rodrigues (ID: 59) - Mudança para Inativo (ID: 2)
+    ('Ativo', 60, 3);   -- Giovanni Santos (ID: 60) - Mudança para Evadido (ID: 3)
