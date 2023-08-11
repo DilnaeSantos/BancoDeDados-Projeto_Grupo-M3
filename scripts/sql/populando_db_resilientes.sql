@@ -362,4 +362,37 @@ VALUES
 
 -- Inserts da tabela Log 
 INSERT INTO log (status_anterior, id_aluno, id_status)
-VALUES();
+VALUES
+    ('Ativo', 4, 4),    
+    ('Ativo', 5, 2),    
+    ('Ativo', 6, 3),   
+    ('Ativo', 9, 4),    
+    ('Ativo', 13, 5),   
+    ('Ativo', 15, 3),   
+    ('Ativo', 17, 4),   
+    ('Ativo', 18, 2),   
+    ('Ativo', 22, 3), 
+    ('Ativo', 23, 2),  
+    ('Ativo', 25, 4),   
+    ('Ativo', 28, 2),  
+    ('Ativo', 29, 3),   
+    ('Ativo', 31, 2),   
+    ('Ativo', 32, 3),  
+    ('Ativo', 36, 3),   
+    ('Ativo', 37, 2),   
+    ('Ativo', 38, 4),   
+    ('Ativo', 40, 3),   
+    ('Ativo', 42, 3),  
+    ('Ativo', 43, 2),   
+    ('Ativo', 44, 4),  
+    ('Ativo', 46, 3),   
+    ('Ativo', 48, 4),   
+    ('Ativo', 49, 2),  
+    ('Ativo', 51, 2),   
+    ('Ativo', 52, 3),   
+    ('Ativo', 54, 4),  
+    ('Ativo', 56, 3),   
+    ('Ativo', 57, 2),   
+    ('Ativo', 59, 2),   
+    ('Ativo', 60, 3);   
+    
