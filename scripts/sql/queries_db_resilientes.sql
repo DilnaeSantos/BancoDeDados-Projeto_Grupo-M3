@@ -2,8 +2,9 @@
 USE resilientes;
 
 -- Consultas obrigatórias:
-
 -- 1. Seleciona a quantidade total de ALUNOS cadastrados no BANCO DE DADOS:
+SELECT COUNT(*) AS total_alunos
+FROM Aluno;
 
 -- 2. Seleciona quais FACILITADORES atuam em mais de uma TURMA:
 
