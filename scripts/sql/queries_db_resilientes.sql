@@ -4,7 +4,7 @@ USE resilientes;
 -- Consultas obrigatórias:
 -- 1. Seleciona a quantidade total de ALUNOS cadastrados no BANCO DE DADOS:
 SELECT COUNT(*) AS total_alunos
-FROM Aluno;
+FROM aluno;
 
 -- 2. Seleciona quais FACILITADORES atuam em mais de uma TURMA:
 
@@ -17,7 +17,10 @@ FROM Aluno;
     -- Tema: Alunos PcD
 -- 5. Cria uma view que selecione a % de ALUNOS com STATUS "Concluído" agrupados por ALUNOS PcD e por CURSO:
 
--- 6. Quantos ALUNOS PcD no total?
+-- 6. Seleciona a quantidade total de ALUNOS PcD cadastrados no BANCO DE DADOS:
+SELECT COUNT(*) AS total_alunos_pcd
+FROM aluno
+WHERE pcd = 1;
 
 -- 7. Quantos ALUNOS PcD por curso?
 
