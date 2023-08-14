@@ -359,38 +359,7 @@ VALUES
     UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '58');
 
 -- Inserts da tabela Log
-    -- Os dados foram inseridos manualmente.
+-- Os dados foram inseridos manualmente.
 INSERT INTO log (status_anterior, id_aluno, id_status)
 VALUES
-    ('Ativo', 4, 4), -- Juan Iago Souza (ID: 4) - Mudança para Concluído (ID: 4)
-    ('Ativo', 5, 2), -- Marcela Valentina Nicole Fogaça (ID: 5) - Mudança para Inativo (ID: 2)
-    ('Ativo', 6, 3), -- Levi Tomás Cauê Moura (ID: 6) - Mudança para Evadido (ID: 3)
-    ('Ativo', 9, 4), -- Junior Costa (ID: 9) - Mudança para Concluído (ID: 4)
-    ('Ativo', 13, 5), -- Clarice Antônia da Luz (ID: 13) - Mudança para Reprovado (ID: 5)
-    ('Ativo', 15, 3), -- Lucca Juan Carvalho (ID: 15) - Mudança para Evadido (ID: 3)
-    ('Ativo', 17, 4), -- Lúcia Nina da Paz (ID: 17) - Mudança para Concluído (ID: 4)
-    ('Ativo', 18, 2), -- Pedro Bento Monteiro (ID: 18) - Mudança para Inativo (ID: 2)
-    ('Ativo', 22, 3), -- Vanessa Bianca Rosângela Pinto (ID: 22) - Mudança para Evadido (ID: 3)
-    ('Ativo', 23, 2), -- Liz Sophia Isis Oliveira (ID: 23) - Mudança para Inativo (ID: 2)
-    ('Ativo', 25, 4), -- Matheus Enrico Costa (ID: 25) - Mudança para Concluído (ID: 4)
-    ('Ativo', 28, 2), -- Pedro Henrique Oliveira (ID: 28) - Mudança para Inativo (ID: 2)
-    ('Ativo', 29, 3), -- Lucas Gabriel Pereira (ID: 29) - Mudança para Evadido (ID: 3)
-    ('Ativo', 31, 2), -- Felipe Oliveira (ID: 31) - Mudança para Inativo (ID: 2)
-    ('Ativo', 32, 3), -- Mariana Almeida (ID: 32) - Mudança para Evadido (ID: 3)
-    ('Ativo', 36, 3), -- Gabriela Oliveira (ID: 36) - Mudança para Evadido (ID: 3)
-    ('Ativo', 37, 2), -- Lucas Santos (ID: 37) - Mudança para Inativo (ID: 2)
-    ('Ativo', 38, 4), -- Isabela Almeida (ID: 38) - Mudança para Concluído (ID: 4)
-    ('Ativo', 40, 3), -- Pedro Oliveira (ID: 40) - Mudança para Evadido (ID: 3)
-    ('Ativo', 42, 3), -- Thiago Oliveira (ID: 42) - Mudança para Evadido (ID: 3)
-    ('Ativo', 43, 2), -- Alice Rodrigues (ID: 43) - Mudança para Inativo (ID: 2)
-    ('Ativo', 44, 4), -- Gustavo Lima (ID: 44) - Mudança para Concluído (ID: 4)
-    ('Ativo', 46, 3), -- Ricardo Silva (ID: 46) - Mudança para Evadido (ID: 3)
-    ('Ativo', 48, 4), -- Luiz Almeida (ID: 48) - Mudança para Concluído (ID: 4)
-    ('Ativo', 49, 2), -- Isabella Carvalho (ID: 49) - Mudança para Inativo (ID: 2)
-    ('Ativo', 51, 2), -- Lorena Lima (ID: 51) - Mudança para Inativo (ID: 2)
-    ('Ativo', 52, 3), -- Rodrigo Santos (ID: 52) - Mudança para Evadido (ID: 3)
-    ('Ativo', 54, 4), -- Pedro Rodrigues (ID: 54) - Mudança para Concluído (ID: 4)
-    ('Ativo', 56, 3), -- Felipe Almeida (ID: 56) - Mudança para Evadido (ID: 3)
-    ('Ativo', 57, 2), -- Aline Oliveira (ID: 57) - Mudança para Inativo (ID: 2)
-    ('Ativo', 59, 2), -- Bruna Rodrigues (ID: 59) - Mudança para Inativo (ID: 2)
-    ('Ativo', 60, 3); -- Giovanni Santos (ID: 60) - Mudança para Evadido (ID: 3)
+   
