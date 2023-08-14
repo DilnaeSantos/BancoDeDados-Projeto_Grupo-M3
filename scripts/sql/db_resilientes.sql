@@ -1,3 +1,6 @@
+-- Seleciona o BANCO DE DADOS:
+USE resilientes;
+
 -- Tabela Curso 
 CREATE TABLE IF NOT EXISTS `curso` (
     `id_curso` INT PRIMARY KEY AUTO_INCREMENT,
