@@ -6,7 +6,7 @@ USE resilientes;
 SELECT COUNT(*) AS total_alunos
 FROM aluno;
 
--- 2. selecionar quais facilitadores atuam em mais de um curso?
+-- 2. Seleciona quais FACILITADORES atuam em mais de uma TURMA:
 SELECT cmf.id_facilitador, f.nome, COUNT(DISTINCT cmf.id_curso) AS total_cursos
 FROM curso_modulo_facilitador cmf
 JOIN facilitador f ON cmf.id_facilitador = f.id_facilitador
@@ -41,7 +41,7 @@ WHERE pcd = 1;
 
 -- 13. Qual o principal Estado de origem dos ALUNOS PcD?
 
--- 14. Qual a média de idade dos ALUNOS PcD?
-SELECT ROUND(AVG(DATEDIFF(CURRENT_DATE, data_nascimento) / 365)) AS media_idade_pcds
+-- 14. Calcula a média de idade dos ALUNOS PcD cadastrados no BANCO DE DADOS?
+SELECT ROUND(AVG(DATEDIFF(CURRENT_DATE, data_nascimento) / 365)) AS media_idade_alunos_pcd
 FROM aluno
 WHERE pcd = 1;
