@@ -358,7 +358,8 @@ VALUES
     UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '50');
     UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '58');
 
--- Inserts da tabela Log 
+-- Inserts da tabela Log
+    -- Os dados foram inseridos manualmente.
 INSERT INTO log (status_anterior, id_aluno, id_status)
 VALUES
     ('Ativo', 4, 4), -- Juan Iago Souza (ID: 4) - Mudança para Concluído (ID: 4)
