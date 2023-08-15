@@ -94,12 +94,16 @@ FROM aluno a
 JOIN status s ON a.id_status = s.id_status;
 
 -- 8. Quantos ALUNOS PcD com status evadido?
-SELECT facilitador.nome, COUNT(DISTINCT turma.id_turma) AS quantidade_turmas
-FROM facilitador 
-INNER JOIN curso_modulo_facilitador AS cmf ON facilitador.id_facilitador = cmf.id_facilitador
-INNER JOIN turma ON cmf.id_curso = turma.id_curso
-GROUP BY facilitador.id_facilitador, facilitador.nome
-HAVING COUNT(DISTINCT turma.id_turma) > 1;
+SELECT
+    turma.nome AS nome_turma,
+    COUNT(aluno.id_aluno) AS total_alunos,
+    (SELECT COUNT(*) FROM aluno AS aluno_pcd WHERE aluno_pcd.id_turma = turma.id_turma AND aluno_pcd.pcd = true) AS total_alunos_pcd,
+    (SELECT COUNT(*) FROM aluno AS aluno_evasao WHERE aluno_evasao.id_turma = turma.id_turma AND aluno_evasao.pcd = true AND aluno_evasao.id_status = 4) AS total_evasao_pcd,
+    ROUND(((SELECT COUNT(*) FROM aluno AS aluno_evasao WHERE aluno_evasao.id_turma = turma.id_turma AND aluno_evasao.pcd = true AND aluno_evasao.id_status = 4) / (SELECT COUNT(*) FROM aluno AS aluno_pcd WHERE aluno_pcd.id_turma = turma.id_turma AND aluno_pcd.pcd = true)) * 100, 2) AS porcentagem_evasao
+FROM
+    turma 
+LEFT JOIN aluno ON turma.id_turma = aluno.id_turma
+GROUP BY turma.nome;
 
 -- 9. Quantos ALUNOS PcD com status reprovado?
 
