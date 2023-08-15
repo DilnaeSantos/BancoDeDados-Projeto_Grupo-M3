@@ -72,7 +72,7 @@ ORDER BY quantidade_alunos_pcd DESC;
 
 -- 4. Cria uma view que seleciona a quantidade de ALUNOS PcD agrupados por CURSO:
 CREATE VIEW view_alunos_pcd_por_curso AS
-SELECT curso.nome, COUNT(*) AS quantidade_alunos_pcd
+SELECT curso.nome, COUNT(*) AS quantidade_alunos_pcd_curso
 FROM aluno
 INNER JOIN turma ON aluno.id_turma = turma.id_turma
 INNER JOIN curso ON turma.id_curso = curso.id_curso
@@ -80,6 +80,11 @@ WHERE aluno.pcd = 1
 GROUP BY curso.nome;
 
 -- 5. Quantos ALUNOS PcD por turma?
+SELECT turma.nome, COUNT(*) AS quantidade_alunos_pcd_turma
+FROM aluno
+INNER JOIN turma ON aluno.id_turma = turma.id_turma
+WHERE aluno.pcd = 1
+GROUP BY turma.nome;
 
 -- 6. Quantos ALUNOS PcD com status ativo?
 SELECT
