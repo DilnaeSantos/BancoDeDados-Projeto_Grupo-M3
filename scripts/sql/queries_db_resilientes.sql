@@ -8,6 +8,13 @@ FROM aluno;
 
 -- 2. Seleciona quais FACILITADORES atuam em mais de uma TURMA:
 
+SELECT facilitador.nome, COUNT(DISTINCT turma.id_turma) AS quantidade_turmas
+FROM facilitador 
+INNER JOIN curso_modulo_facilitador AS cmf ON facilitador.id_facilitador = cmf.id_facilitador
+INNER JOIN turma ON cmf.id_curso = turma.id_curso
+GROUP BY facilitador.id_facilitador, facilitador.nome
+HAVING COUNT(DISTINCT turma.id_turma) > 1;
+
 -- 3. Cria uma view que seleciona a % de ALUNOS com STATUS "Evadido" agrupados por TURMA:
 
 -- 4. Insere um novo dado na tabela de LOG quando o atributo STATUS de um ALUNO é atualizado:
