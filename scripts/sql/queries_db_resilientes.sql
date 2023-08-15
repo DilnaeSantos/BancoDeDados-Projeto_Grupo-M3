@@ -7,7 +7,6 @@ SELECT COUNT(*) AS total_alunos
 FROM aluno;
 
 -- 2. Seleciona quais FACILITADORES atuam em mais de uma TURMA:
-
 SELECT facilitador.nome, COUNT(DISTINCT turma.id_turma) AS quantidade_turmas
 FROM facilitador 
 INNER JOIN curso_modulo_facilitador AS cmf ON facilitador.id_facilitador = cmf.id_facilitador
@@ -39,7 +38,6 @@ GROUP BY
 ORDER BY
     facilitador.habilidade;
 
-
 -- Consultas extras | Tema - Alunos PcD:
 -- 1. Seleciona a quantidade total de ALUNOS PcD cadastrados no BANCO DE DADOS:
 SELECT COUNT(*) AS total_alunos_pcd
@@ -69,6 +67,12 @@ GROUP BY curso.nome;
 -- 7. Quantos ALUNOS PcD com status inativo?
 
 -- 8. Quantos ALUNOS PcD com status evadido?
+SELECT facilitador.nome, COUNT(DISTINCT turma.id_turma) AS quantidade_turmas
+FROM facilitador 
+INNER JOIN curso_modulo_facilitador AS cmf ON facilitador.id_facilitador = cmf.id_facilitador
+INNER JOIN turma ON cmf.id_curso = turma.id_curso
+GROUP BY facilitador.id_facilitador, facilitador.nome
+HAVING COUNT(DISTINCT turma.id_turma) > 1;
 
 -- 9. Quantos ALUNOS PcD com status reprovado?
 
