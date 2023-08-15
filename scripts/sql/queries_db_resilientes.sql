@@ -73,3 +73,10 @@ JOIN status s ON a.id_status = s.id_status;
 
 -- 10. Quantos com status concluído?
 
+SELECT
+COUNT(*) AS total_alunos,
+SUM(CASE WHEN a.pcd = TRUE AND s.situacao = 'Concluído' THEN 1 ELSE 0 END) AS alunos_pcd_concluidos,
+(SUM(CASE WHEN a.pcd = TRUE AND s.situacao = 'Concluído' THEN 1 ELSE 0 END) / COUNT(*)) * 100 AS percentual_pcd_concluidos
+FROM aluno a
+JOIN status s ON a.id_status = s.id_status;
+
