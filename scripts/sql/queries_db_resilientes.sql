@@ -52,6 +52,12 @@ JOIN status s ON a.id_status = s.id_status;
 
 
 -- 7. Quantos ALUNOS PcD com status inativo?
+SELECT
+COUNT(*) AS total_alunos,
+SUM(CASE WHEN a.pcd = TRUE AND s.situacao = 'Inativo' THEN 1 ELSE 0 END) AS alunos_pcd_inativos,
+(SUM(CASE WHEN a.pcd = TRUE AND s.situacao = 'Inativo' THEN 1 ELSE 0 END) / COUNT(*)) * 100 AS percentual_pcd_inativos
+FROM aluno a
+JOIN status s ON a.id_status = s.id_status;
 
 -- 8. Quantos ALUNOS PcD com status evadido?
 
