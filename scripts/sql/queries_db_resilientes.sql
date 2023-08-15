@@ -16,6 +16,18 @@ HAVING COUNT(DISTINCT turma.id_turma) > 1;
 
 -- 3. Cria uma view que seleciona a % de ALUNOS com STATUS "Evadido" agrupados por TURMA:
 
+CREATE VIEW view_porcentagem_evasao AS
+SELECT
+t.nome AS nome_turma,
+COUNT(a.id_aluno) AS total_alunos,
+SUM(CASE WHEN st.situacao = 'Evadido' THEN 1 ELSE 0 END) AS total_evasao, 
+(SUM(CASE WHEN st.situacao = 'Evadido' THEN 1 ELSE 0 END) / COUNT(a.id_aluno)) * 100 AS porcentagem_evasao 
+FROM
+turma t
+LEFT JOIN aluno a ON t.id_turma = a.id_turma
+LEFT JOIN status st ON a.id_status = st.id_status 
+GROUP BY t.nome; 
+
 -- 4. Insere um novo dado na tabela de LOG quando o atributo STATUS de um ALUNO é atualizado:
     -- Os dados foram inseridos manualmente no "INSERT INTO log".
 
