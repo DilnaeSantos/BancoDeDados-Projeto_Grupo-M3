@@ -15,6 +15,22 @@ FROM aluno;
 
 -- Consulta obrigatória que combina pelo menos 3 tabelas:
 -- 1. Seleciona os FACILITADORES que estão ativos, mas estão disponíveis para novas TURMAS:
+SELECT
+    facilitador.nome,
+    facilitador.habilidade
+FROM
+    facilitador
+LEFT JOIN
+    curso_modulo_facilitador AS cmf ON facilitador.id_facilitador = cmf.id_facilitador
+LEFT JOIN
+    turma ON cmf.id_curso = turma.id_curso AND turma.id_status = 1
+WHERE
+    facilitador.id_status = 1
+    AND turma.id_curso IS NULL
+GROUP BY
+    facilitador.nome, facilitador.habilidade
+ORDER BY
+    facilitador.habilidade;
 
 
 -- Consultas extras | Tema - Alunos PcD:
