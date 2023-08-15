@@ -95,6 +95,7 @@ JOIN status s ON a.id_status = s.id_status;
 
 -- 8. Quantos ALUNOS PcD com status evadido?
 SELECT
+    turma.id_turma,
     turma.nome AS nome_turma,
     COUNT(aluno.id_aluno) AS total_alunos,
     (SELECT COUNT(*) FROM aluno AS aluno_pcd WHERE aluno_pcd.id_turma = turma.id_turma AND aluno_pcd.pcd = true) AS total_alunos_pcd,
@@ -103,7 +104,8 @@ SELECT
 FROM
     turma 
 LEFT JOIN aluno ON turma.id_turma = aluno.id_turma
-GROUP BY turma.nome;
+GROUP BY turma.id_turma, turma.nome;
+
 
 -- 9. Quantos ALUNOS PcD com status reprovado?
 
