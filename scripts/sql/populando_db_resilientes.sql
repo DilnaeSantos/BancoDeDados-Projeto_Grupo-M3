@@ -359,43 +359,7 @@ VALUES
     UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '58');
 
 -- Inserts da tabela Log
-    -- Os dados foram inseridos manualmente.
-    INSERT INTO log (status_anterior, id_aluno, id_status)
+-- Os dados foram inseridos manualmente.
+INSERT INTO log (status_anterior, id_aluno, id_status)
 VALUES
-    ('Ativo', 3, 5),
-    ('Ativo', 4, 4),
-    ('Ativo', 6, 3),
-    ('Ativo', 7, 4),
-    ('Ativo', 8, 4),
-    ('Ativo', 9, 4),
-    ('Ativo', 11, 4),
-    ('Ativo', 12, 4),
-    ('Ativo', 13, 5),
-    ('Ativo', 15, 3),
-    ('Ativo', 16, 4),
-    ('Ativo', 17, 4),
-    ('Ativo', 18, 4),
-    ('Ativo', 20, 4),
-    ('Ativo', 22, 3),
-    ('Ativo', 24, 4),
-    ('Ativo', 25, 4),
-    ('Ativo', 28, 5),
-    ('Ativo', 29, 3),
-    ('Ativo', 30, 4),
-    ('Ativo', 33, 4),
-    ('Ativo', 34, 3),
-    ('Ativo', 37, 3),
-    ('Ativo', 38, 4),
-    ('Ativo', 40, 3),
-    ('Ativo', 41, 4),
-    ('Ativo', 43, 5),
-    ('Ativo', 44, 4),
-    ('Ativo', 46, 5),
-    ('Ativo', 47, 4),
-    ('Ativo', 50, 4),
-    ('Ativo', 51, 4),
-    ('Ativo', 54, 4),
-    ('Ativo', 55, 4),
-    ('Ativo', 58, 4),
-    ('Ativo', 59, 4),
-    ('Ativo', 60, 3);
+   
