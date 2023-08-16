@@ -3,53 +3,60 @@ USE resilientes;
 
 -- Consultas obrigatórias:
 -- 1. Seleciona a quantidade total de ALUNOS cadastrados no BANCO DE DADOS:
-SELECT COUNT(*) AS total_alunos
-FROM aluno;
+SELECT 
+    COUNT(*) AS total_alunos
+FROM
+    aluno
 
 -- 2. Seleciona quais FACILITADORES atuam em mais de uma TURMA:
-SELECT facilitador.nome, COUNT(DISTINCT turma.id_turma) AS quantidade_turmas
-FROM facilitador 
-INNER JOIN curso_modulo_facilitador AS cmf ON facilitador.id_facilitador = cmf.id_facilitador
-INNER JOIN turma ON cmf.id_curso = turma.id_curso
-GROUP BY facilitador.id_facilitador, facilitador.nome
-HAVING COUNT(DISTINCT turma.id_turma) > 1;
+SELECT 
+    facilitador.nome,
+    COUNT(DISTINCT turma.id_turma) AS quantidade_turmas
+FROM
+    facilitador
+        INNER JOIN
+    curso_modulo_facilitador AS cmf ON facilitador.id_facilitador = cmf.id_facilitador
+        INNER JOIN
+    turma ON cmf.id_curso = turma.id_curso
+GROUP BY facilitador.id_facilitador , facilitador.nome
+HAVING COUNT(DISTINCT turma.id_turma) > 1
 
 -- 3. Cria uma view que seleciona a % de ALUNOS com STATUS "Evadido" agrupados por TURMA:
 CREATE VIEW view_porcentagem_evasao AS
-SELECT
-t.nome AS nome_turma,
-COUNT(a.id_aluno) AS total_alunos,
-SUM(CASE WHEN st.situacao = 'Evadido' THEN 1 ELSE 0 END) AS total_evasao, 
-(SUM(CASE WHEN st.situacao = 'Evadido' THEN 1 ELSE 0 END) / COUNT(a.id_aluno)) * 100 AS porcentagem_evasao 
-FROM
-turma t
-LEFT JOIN aluno a ON t.id_turma = a.id_turma
-LEFT JOIN status st ON a.id_status = st.id_status 
-GROUP BY t.nome; 
+    SELECT 
+        t.nome AS nome_turma,
+        COUNT(a.id_aluno) AS total_alunos,
+        SUM(CASE
+            WHEN st.situacao = 'Evadido' THEN 1
+            ELSE 0
+        END) AS total_evasao,
+        (SUM(CASE
+            WHEN st.situacao = 'Evadido' THEN 1
+            ELSE 0
+        END) / COUNT(a.id_aluno)) * 100 AS porcentagem_evasao
+    FROM
+        turma t
+            LEFT JOIN
+        aluno a ON t.id_turma = a.id_turma
+            LEFT JOIN
+        status st ON a.id_status = st.id_status
+    GROUP BY t.nome 
 
 -- 4. Insere um novo dado na tabela de LOG quando o atributo STATUS de um ALUNO é atualizado:
-    -- Os dados foram inseridos manualmente no "INSERT INTO log".
-
--- Consulta obrigatória que combina pelo menos 3 tabelas:
--- 1. Seleciona os FACILITADORES que estão ativos, mas estão disponíveis para novas TURMAS:
-SELECT
-    facilitador.nome,
-    facilitador.habilidade
+SELECT 
+    facilitador.nome, facilitador.habilidade
 FROM
     facilitador
-LEFT JOIN
+        LEFT JOIN
     curso_modulo_facilitador AS cmf ON facilitador.id_facilitador = cmf.id_facilitador
-LEFT JOIN
-    turma ON cmf.id_curso = turma.id_curso AND turma.id_status = 1
+        LEFT JOIN
+    turma ON cmf.id_curso = turma.id_curso
+        AND turma.id_status = 1
 WHERE
     facilitador.id_status = 1
-    AND turma.id_curso IS NULL
-GROUP BY
-    facilitador.nome, facilitador.habilidade
-ORDER BY
-    facilitador.habilidade;
-
--- Consultas extras | Tema - Alunos PcD:
+        AND turma.id_curso IS NULL
+GROUP BY facilitador.nome , facilitador.habilidade
+ORDER BY facilitador.habilidadensultas extras | Tema - Alunos PcD:
 -- 1. Seleciona a quantidade total de ALUNOS PcD cadastrados no BANCO DE DADOS:
 SELECT COUNT(*) AS total_alunos_pcd
 FROM aluno
@@ -158,6 +165,3 @@ FROM
     turma 
 LEFT JOIN aluno ON turma.id_turma = aluno.id_turma
 GROUP BY turma.id_turma, turma.nome;
-
-
-

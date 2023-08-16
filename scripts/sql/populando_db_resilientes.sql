@@ -347,8 +347,16 @@ VALUES
     UPDATE `resilientes`.`aluno` SET `id_status` = '1' WHERE (`id_aluno` = '36');
     -- Update - Alunos - Turma 4
     UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '8');
-    UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '11');
-    UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '16');
+UPDATE `resilientes`.`aluno` 
+SET 
+    `id_status` = '4'
+WHERE
+    (`id_aluno` = '11');
+UPDATE `resilientes`.`aluno` 
+SET 
+    `id_status` = '4'
+WHERE
+    (`id_aluno` = '16');
     UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '20');
     UPDATE `resilientes`.`aluno` SET `id_status` = '5' WHERE (`id_aluno` = '28');
     UPDATE `resilientes`.`aluno` SET `id_status` = '4' WHERE (`id_aluno` = '33');
@@ -367,7 +375,7 @@ VALUES
     ('Ativo', 6, 3), 
     ('Ativo', 7, 4), 
     ('Ativo', 8, 4), 
-    ('Ativo',9, 4), 
+    ('Ativo', 9, 4), 
     ('Ativo', 11, 4), 
     ('Ativo', 12, 4), 
     ('Ativo', 13, 5), 
