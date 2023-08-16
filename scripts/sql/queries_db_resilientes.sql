@@ -88,48 +88,76 @@ GROUP BY turma.nome;
 
 -- 6. Quantos ALUNOS PcD com status ativo?
 SELECT
-COUNT(*) AS total_alunos,
-SUM(CASE WHEN a.pcd = TRUE AND s.situacao = 'Ativo' THEN 1 ELSE 0 END) AS alunos_pcd_ativos,
-ROUND((SUM(CASE WHEN a.pcd = TRUE AND s.situacao = 'Ativo' THEN 1 ELSE 0 END) / COUNT(*)) * 100, 2) AS percentual_pcd_ativos
-FROM aluno a
-JOIN status s ON a.id_status = s.id_status;
-
-
--- 7. Quantos ALUNOS PcD com status inativo?
-SELECT
-COUNT(*) AS total_alunos,
-SUM(CASE WHEN a.pcd = TRUE AND s.situacao = 'Inativo' THEN 1 ELSE 0 END) AS alunos_pcd_inativos,
-ROUND((SUM(CASE WHEN a.pcd = TRUE AND s.situacao = 'Inativo' THEN 1 ELSE 0 END) / COUNT(*)) * 100, 2) AS percentual_pcd_inativos
-FROM aluno a
-JOIN status s ON a.id_status = s.id_status;
-
--- 8. Quantos ALUNOS PcD com status evadido?
-SELECT
     turma.id_turma,
     turma.nome AS nome_turma,
     COUNT(aluno.id_aluno) AS total_alunos,
     (SELECT COUNT(*) FROM aluno AS aluno_pcd WHERE aluno_pcd.id_turma = turma.id_turma AND aluno_pcd.pcd = true) AS total_alunos_pcd,
-    (SELECT COUNT(*) FROM aluno AS aluno_evasao WHERE aluno_evasao.id_turma = turma.id_turma AND aluno_evasao.pcd = true AND aluno_evasao.id_status = 4) AS total_evasao_pcd,
-    ROUND(((SELECT COUNT(*) FROM aluno AS aluno_evasao WHERE aluno_evasao.id_turma = turma.id_turma AND aluno_evasao.pcd = true AND aluno_evasao.id_status = 4) / (SELECT COUNT(*) FROM aluno AS aluno_pcd WHERE aluno_pcd.id_turma = turma.id_turma AND aluno_pcd.pcd = true)) * 100, 2) AS porcentagem_evasao
+    (SELECT COUNT(*) FROM aluno AS aluno_ativo WHERE aluno_ativo.id_turma = turma.id_turma AND aluno_ativo.pcd = true AND aluno_ativo.id_status = 1) AS total_ativos_pcd,
+    ROUND(((SELECT COUNT(*) FROM aluno AS aluno_ativo WHERE aluno_ativo.id_turma = turma.id_turma AND aluno_ativo.pcd = true AND aluno_ativo.id_status = 1) / (SELECT COUNT(*) FROM aluno AS aluno_pcd WHERE aluno_pcd.id_turma = turma.id_turma AND aluno_pcd.pcd = true)) * 100, 2) AS porcentagem_ativos
 FROM
     turma 
 LEFT JOIN aluno ON turma.id_turma = aluno.id_turma
 GROUP BY turma.id_turma, turma.nome;
 
 
--- 9. Quantos ALUNOS PcD com status reprovado?
+
+-- 7. Quantos ALUNOS PcD com status inativo?
 SELECT
-COUNT(*) AS total_alunos,
-SUM(CASE WHEN a.pcd = TRUE AND s.situacao = 'Reprovado' THEN 1 ELSE 0 END) AS alunos_pcd_reprovados,
-ROUND((SUM(CASE WHEN a.pcd = TRUE AND s.situacao = 'Reprovado' THEN 1 ELSE 0 END) / COUNT(*)) * 100, 2) AS percentual_pcd_reprovados
-FROM aluno a
-JOIN status s ON a.id_status = s.id_status;
+    turma.id_turma,
+    turma.nome AS nome_turma,
+    COUNT(aluno.id_aluno) AS total_alunos,
+    (SELECT COUNT(*) FROM aluno AS aluno_pcd WHERE aluno_pcd.id_turma = turma.id_turma AND aluno_pcd.pcd = true) AS total_alunos_pcd,
+    (SELECT COUNT(*) FROM aluno AS aluno_inativo WHERE aluno_inativo.id_turma = turma.id_turma AND aluno_inativo.pcd = true AND aluno_inativo.id_status = 2) AS total_inativos_pcd,
+    ROUND(((SELECT COUNT(*) FROM aluno AS aluno_inativo WHERE aluno_inativo.id_turma = turma.id_turma AND aluno_inativo.pcd = true AND aluno_inativo.id_status = 2) / (SELECT COUNT(*) FROM aluno AS aluno_pcd WHERE aluno_pcd.id_turma = turma.id_turma AND aluno_pcd.pcd = true)) * 100, 2) AS porcentagem_inativos
+FROM
+    turma 
+LEFT JOIN aluno ON turma.id_turma = aluno.id_turma
+GROUP BY turma.id_turma, turma.nome;
+
+-- 8. Quantos ALUNOS PcD com status evadido?
+
+SELECT
+    turma.id_turma,
+    turma.nome AS nome_turma,
+    COUNT(aluno.id_aluno) AS total_alunos,
+    (SELECT COUNT(*) FROM aluno AS aluno_pcd WHERE aluno_pcd.id_turma = turma.id_turma AND aluno_pcd.pcd = true) AS total_alunos_pcd,
+    (SELECT COUNT(*) FROM aluno AS aluno_evasao WHERE aluno_evasao.id_turma = turma.id_turma AND aluno_evasao.pcd = true AND aluno_evasao.id_status = 3) AS total_evasao_pcd,
+    ROUND(((SELECT COUNT(*) FROM aluno AS aluno_evasao WHERE aluno_evasao.id_turma = turma.id_turma AND aluno_evasao.pcd = true AND aluno_evasao.id_status = 3) / (SELECT COUNT(*) FROM aluno AS aluno_pcd WHERE aluno_pcd.id_turma = turma.id_turma AND aluno_pcd.pcd = true)) * 100, 2) AS porcentagem_evasao
+FROM
+    turma 
+LEFT JOIN aluno ON turma.id_turma = aluno.id_turma
+GROUP BY turma.id_turma, turma.nome;
+
+
+
+-- 9. Quantos ALUNOS PcD com status reprovado?
+
+SELECT
+    turma.id_turma,
+    turma.nome AS nome_turma,
+    COUNT(aluno.id_aluno) AS total_alunos,
+    (SELECT COUNT(*) FROM aluno AS aluno_pcd WHERE aluno_pcd.id_turma = turma.id_turma AND aluno_pcd.pcd = true) AS total_alunos_pcd,
+    (SELECT COUNT(*) FROM aluno AS aluno_reprovado WHERE aluno_reprovado.id_turma = turma.id_turma AND aluno_reprovado.pcd = true AND aluno_reprovado.id_status = 5) AS total_reprovados_pcd,
+    ROUND(((SELECT COUNT(*) FROM aluno AS aluno_reprovado WHERE aluno_reprovado.id_turma = turma.id_turma AND aluno_reprovado.pcd = true AND aluno_reprovado.id_status = 5) / (SELECT COUNT(*) FROM aluno AS aluno_pcd WHERE aluno_pcd.id_turma = turma.id_turma AND aluno_pcd.pcd = true)) * 100, 2) AS porcentagem_reprovados
+FROM
+    turma 
+LEFT JOIN aluno ON turma.id_turma = aluno.id_turma
+GROUP BY turma.id_turma, turma.nome;
+
 
 -- 10. Quantos com status concluído?
+ 
 SELECT
-COUNT(*) AS total_alunos,
-SUM(CASE WHEN a.pcd = TRUE AND s.situacao = 'Concluído' THEN 1 ELSE 0 END) AS alunos_pcd_concluidos,
-ROUND((SUM(CASE WHEN a.pcd = TRUE AND s.situacao = 'Concluído' THEN 1 ELSE 0 END) / COUNT(*)) * 100, 2) AS percentual_pcd_concluidos
-FROM aluno a
-JOIN status s ON a.id_status = s.id_status;
+    turma.id_turma,
+    turma.nome AS nome_turma,
+    COUNT(aluno.id_aluno) AS total_alunos,
+    (SELECT COUNT(*) FROM aluno AS aluno_pcd WHERE aluno_pcd.id_turma = turma.id_turma AND aluno_pcd.pcd = true) AS total_alunos_pcd,
+    (SELECT COUNT(*) FROM aluno AS aluno_concluido WHERE aluno_concluido.id_turma = turma.id_turma AND aluno_concluido.pcd = true AND aluno_concluido.id_status = 4) AS total_concluidos_pcd,
+    ROUND(((SELECT COUNT(*) FROM aluno AS aluno_concluido WHERE aluno_concluido.id_turma = turma.id_turma AND aluno_concluido.pcd = true AND aluno_concluido.id_status = 4) / (SELECT COUNT(*) FROM aluno AS aluno_pcd WHERE aluno_pcd.id_turma = turma.id_turma AND aluno_pcd.pcd = true)) * 100, 2) AS porcentagem_concluidos
+FROM
+    turma 
+LEFT JOIN aluno ON turma.id_turma = aluno.id_turma
+GROUP BY turma.id_turma, turma.nome;
+
+
 
