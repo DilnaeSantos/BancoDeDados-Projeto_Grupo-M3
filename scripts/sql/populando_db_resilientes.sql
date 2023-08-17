@@ -1,3 +1,6 @@
+-- Seleciona o BANCO DE DADOS:
+USE resilientes;
+
 -- Inserts da tabela Curso
 INSERT INTO curso (nome, carga_horaria)
 VALUES
