@@ -13,13 +13,13 @@ CREATE TABLE IF NOT EXISTS `modulo` (
     `id_modulo` INT PRIMARY KEY AUTO_INCREMENT,
     `numero_modulo` INT NOT NULL,
     `nome` VARCHAR(100) NOT NULL
-)  DEFAULT CHARSET=UTF8MB4
+)  DEFAULT CHARSET=UTF8MB4;
 
 -- Tabela Status
 CREATE TABLE IF NOT EXISTS `status` (
     `id_status` INT PRIMARY KEY AUTO_INCREMENT,
     `situacao` VARCHAR(255) NOT NULL
-)  DEFAULT CHARSET=UTF8MB4
+)  DEFAULT CHARSET=UTF8MB4;
 
 -- Tabela Endereço
 CREATE TABLE IF NOT EXISTS `endereco` (
@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS `endereco` (
     `cidade` VARCHAR(100) NOT NULL,
     `estado` VARCHAR(50) NOT NULL,
     `cep` VARCHAR(10) NOT NULL
-)  DEFAULT CHARSET=UTF8MB4
+)  DEFAULT CHARSET=UTF8MB4;
 
 -- Tabela Turma
 CREATE TABLE IF NOT EXISTS `turma` (
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `turma` (
     `id_curso` INT,
     FOREIGN KEY (`id_curso`)
         REFERENCES `curso` (`id_curso`)
-)  DEFAULT CHARSET=UTF8MB4
+)  DEFAULT CHARSET=UTF8MB4;
 
 ALTER TABLE `turma`
 ADD COLUMN `id_status` INT,
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `facilitador` (
         REFERENCES `endereco` (`id_endereco`),
     FOREIGN KEY (`id_status`)
         REFERENCES `status` (`id_status`)
-)  DEFAULT CHARSET=UTF8MB4
+)  DEFAULT CHARSET=UTF8MB4;
 
 -- Tabela Intermediária Curso-Módulo-Facilitador
 CREATE TABLE IF NOT EXISTS `curso_modulo_facilitador` (
