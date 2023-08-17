@@ -1,0 +1,151 @@
+|* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Allerta Stencil", sans-serif;
+}
+
+body {
+    background-color: #2F2E2E;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Adiciona esta linha para centralizar verticalmente */
+    justify-items: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Adiciona esta linha para centralizar verticalmente */
+    justify-items: center;
+}
+
+h2 {
+    margin-top: 5%;
+    margin-bottom: 2%;
+    color: #ffd000;
+}
+
+.h1-graficos {
+    margin-top: 12%;
+    margin-bottom: 4%;
+}
+
+.cabecalho {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 1%;
+    background-color: #0b0b0b;
+    display: flex;
+    justify-content: center;
+}
+
+.navegacao {
+    height: 30%;
+    width: 50%;
+    font-size: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.link-cabecalho {
+    text-decoration: none;
+    color: #ffd000;
+    margin-right: 10%;
+    padding: 1%;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.link-cabecalho:hover {
+    scale: 1.07;
+    background-color: #ffd000;
+    color: #0b0b0b;
+    border-radius: 10px 100px / 120px 100px;
+}
+
+.div-container {
+    margin: 5%;
+    margin-top: 1%;
+    background-color: #ffd000;
+    padding: 2%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15%;
+}
+
+.icones {
+    margin: 2%;
+    width: 10%;
+    height: 10%;
+    padding: 1%;
+    transition: 0.2s;
+}
+
+.icones:hover {
+    scale: 1.3;
+    background-color: aliceblue;
+    border-radius: 13px 23px;
+}
+
+.modelo-trello {
+    width: 70%;
+}
+
+.colaboradores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 20%;
+    margin: 2%;
+}
+
+.foto-colaboradores {
+    width: 40%;
+    height: 70%;
+    border-radius: 15px 25px;
+    transition: 0.2s;
+}
+
+.foto-colaboradores:hover {
+    scale: 1.3;  
+}
+
+.logos {
+    display: flex;
+    flex-direction: row; /* Mude a direção para coluna */
+    margin-top: 10px; /* Adicione espaço entre as imagens das redes sociais */
+}
+
+#graficos {
+    margin-bottom: 7%;
+}
+
+.rede-social-img {
+    margin-top: 10px; /* Adicione espaço entre as imagens das redes sociais */
+    width: 60%;
+    border: solid black;
+    border-radius: 18%;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.rede-social-img:hover {
+    scale: 1.2;
+}
+
+.link-a-redes-sociais {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
