@@ -1,0 +1,7 @@
+version: '3.1'
+services:
+  mysql-server-db:
+    container_name: mysqlcompose
+    image: mysql-image
+    ports:
+      - '3308:3306'
