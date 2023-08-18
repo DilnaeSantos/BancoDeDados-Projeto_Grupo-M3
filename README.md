@@ -65,4 +65,3 @@ docker-compose up
 
 Seguindo essas instruções, você terá configurado e implementado o projeto Resilientes, podendo escolher entre a implementação diretamente no MySQL Workbench ou utilizando o Docker. O resultado será um banco de dados estruturado com tabelas relacionais que armazenam informações sobre cursos, módulos, turmas, facilitadores e alunos. Além disso, você pode usar as consultas fornecidas para extrair informações relevantes para a tomada de decisões e análise das operações acadêmicas da Resilia.
 
-Este projeto oferece uma base sólida para melhorar a eficiência na gestão de dados educacionais da Resilia, permitindo uma visão mais clara e informada sobre suas operações.
